@@ -4,5 +4,5 @@ import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
   plugins: [reactRefresh(), tailwindcss('./tailwind.config.js')],
-  base:'https://oroboruos02.github.io/web-tekne/',
+  base:"/",
 });

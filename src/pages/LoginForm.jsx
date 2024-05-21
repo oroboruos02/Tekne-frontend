@@ -21,14 +21,8 @@ export default function Example() {
                   alt="Your Company"
                 />
                 <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                  Sign in to your account
+                Iniciar sesión en su cuenta
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-gray-500">
-                  Not a member?{' '}
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Start a 14 day free trial
-                  </a>
-                </p>
               </div>
   
               <div className="mt-10">
@@ -36,7 +30,7 @@ export default function Example() {
                   <form action="#" method="POST" className="space-y-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                        Email address
+                      Dirección de correo electrónico
                       </label>
                       <div className="mt-2">
                         <input
@@ -52,7 +46,7 @@ export default function Example() {
   
                     <div>
                       <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                        Password
+                        Constraseña
                       </label>
                       <div className="mt-2">
                         <input
@@ -75,13 +69,13 @@ export default function Example() {
                           className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                         />
                         <label htmlFor="remember-me" className="ml-3 block text-sm leading-6 text-gray-700">
-                          Remember me
+                          Recuerdame
                         </label>
                       </div>
   
                       <div className="text-sm leading-6">
                         <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                          Forgot password?
+                          Has olvidado tu contraseña?
                         </a>
                       </div>
                     </div>
@@ -91,7 +85,7 @@ export default function Example() {
                         type="submit"
                         className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                       >
-                        Sign in
+                        Iniciar sesión
                       </button>
                     </div>
                   </form>
@@ -103,7 +97,7 @@ export default function Example() {
                       <div className="w-full border-t border-gray-200" />
                     </div>
                     <div className="relative flex justify-center text-sm font-medium leading-6">
-                      <span className="bg-white px-6 text-gray-900">Or continue with</span>
+                      <span className="bg-white px-6 text-gray-900">O continuar con</span>
                     </div>
                   </div>
   
@@ -154,7 +148,7 @@ export default function Example() {
           <div className="relative hidden w-0 flex-1 lg:block">
             <img
               className="absolute inset-0 h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1496917756835-20cb06e75b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
+              src="https://www.tecsaqro.com.mx/wp-content/uploads/2020/08/mantenimiento_subestaciones_electricas.jpg"
               alt=""
             />
           </div>

@@ -6,6 +6,8 @@ import RegisterForm from './pages/RegisterForm';
 import Contact from './pages/Contact';
 import Who from './pages/Who';
 import Services from './pages/Services';
+import Directory from './pages/Directory';
+import Experiences from './pages/Experiences';
 import 'tailwindcss/tailwind.css';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/who" element={<Who />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/directory" element={<Directory />} />
+        <Route path="/experiences" element={<Experiences />} />
       </Routes>
     </Router>
   );

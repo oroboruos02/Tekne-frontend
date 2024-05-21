@@ -1,136 +1,83 @@
 import React from 'react';
 import { Fragment, useState } from 'react';
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
-import {Bars3Icon,MagnifyingGlassIcon,XMarkIcon,} from '@heroicons/react/24/outline';
+import {Bars3Icon,XMarkIcon,} from '@heroicons/react/24/outline';
 
 const navigation = {
   categories: [
-    {
-      name: 'DIRECTORIO',
-      featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
-        },
-        {
-          name: 'Basic Tees',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
-        },
-        {
-          name: 'Accessories',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg',
-          imageAlt: 'Model wearing minimalist watch with black wristband and white watch face.',
-        },
-        {
-          name: 'Carry',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
-          imageAlt: 'Model opening tan leather long wallet with credit card pockets and cash pouch.',
-        },
-      ],
-    },
-    {
-      name: 'SERVICIOS',
-      featured: [
-        {
-          name: 'Tableros electricos',
-          href: './Services',
-          imageSrc: 'https://www.shutterstock.com/shutterstock/photos/2197288849/display_1500/stock-photo-adult-electrical-engineer-inspect-the-electrical-systems-at-the-equipment-control-cabinet-2197288849.jpg',
-          imageAlt: 'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
-        },
-        {
-          name: 'Servicios',
-          href: './Services',
-          imageSrc: 'http://ciproingenieria.com/wp-content/uploads/2020/03/%C2%B4poiuy.png',
-          imageAlt: 'Model wearing light heather gray t-shirt.',
-        },
-        {
-          name: 'Retrofit',
-          href: './Services',
-          imageSrc: 'http://ciproingenieria.com/wp-content/uploads/2020/03/%C3%B1liug.png',
-          imageAlt:
-            'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
-        },
-        {
-          name: 'Pruebas',
-          href: './Services',
-          imageSrc: 'http://ciproingenieria.com/wp-content/uploads/2020/10/ELEC.png',
-          imageAlt: 'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
-        },
-      ],
-    },
+
   ],
   pages: [
     { name: 'INICIO', href: '/' },
     { name: 'QUIENES SOMOS', href: './who' },
+    { name: 'DIRECTORIO DE AUTOMATIZACION', href: './directory' },
+    { name: 'SERVICIOS', href: './services' },
+    { name: 'EXPERIENCIAS', href: './experiences' },
   ],
 }
 
 const categories = [
   {
-    name: 'New Arrivals',
-    href: '#',
+    name: 'Suministro de Personal Técnico',
+    href: './Services',
     imageSrc: 'https://www.glingenieros.com.co/wp-content/uploads/2020/09/subestacion-elec31.jpg',
   },
   {
-    name: 'Productivity',
-    href: '#',
+    name: 'Comunicaciones',
+    href: './Services',
     imageSrc: 'https://www.coinsi.com/wp-content/uploads/2021/09/COINSI-SUBESTACIONES-scaled.jpg',
   },
   {
-    name: 'Workspace',
-    href: '#',
+    name: 'Montaje Electromecánico',
+    href: './Services',
     imageSrc: 'https://d100mj7v0l85u5.cloudfront.net/s3fs-public/tableros-y-subestaciones-electricas-de-GL-Ingenieros-122147-g.jpg',
   },
   {
-    name: 'Accessories',
-    href: '#',
+    name: 'Cableado y Conexionado',
+    href: './Services',
     imageSrc: 'https://rentadeplantas.com.mx/wp-content/uploads/2021/08/fallas-comunes-subestaciones-electricas.jpg',
   },
-  { name: 'Sale', href: '#', imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1TzOXv_Ved3pAkBPiKzE5J2saU-Umw-xhA&usqp=CAU' },
+  { name: 'Mantenimiento', href: './Services', imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1TzOXv_Ved3pAkBPiKzE5J2saU-Umw-xhA&usqp=CAU' },
 ]
 const collections = [
   {
-    name: 'Handcrafted Collection',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg',
+    name: 'Control Industrial',
+    href: './Services',
+    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
     imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
-    description: 'Keep your phone, keys, and wallet together, so you can lose everything at once.',
+    description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
   },
   {
-    name: 'Organized Desk Collection',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg',
+    name: 'Instrumentación',
+    href: './Services',
+    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
     imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
-    description: 'The rest of the house will still be a mess, but your desk will look great.',
+    description: 'Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.',
   },
   {
-    name: 'Focus Collection',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg',
+    name: 'Áreas Clasificadas',
+    href: './Services',
+    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
     imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
-    description: 'Be more productive than enterprise project managers with a single piece of paper.',
+    description: 'Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof.',
   },
 ]
 const footerNavigation = {
-  shop: [
-    { name: 'Bags', href: '#' },
+  Comprar: [
+    { name: 'Servicios', href: './services' },
   ],
   company: [
-    { name: 'Who we are', href: '#' },
-    { name: 'Sustainability', href: '#' },
+    { name: 'Quienes somos', href: './who' },
+    { name: 'Sostenibilidad', href: '#' },
 
   ],
   account: [
-    { name: 'Manage Account', href: '#' },
+    { name: 'Administrar cuenta', href: '#' },
   ],
   connect: [
-    { name: 'Contact Us', href: '#' },
+    { name: 'Contacta con nosotros', href: './contact' },
+    { name: 'Teléfono: 571 8005381', href: '#' },
+    { name: 'Celular: 3132336061 / 3108581442', href: '#' },
   ],
 }
 
@@ -236,12 +183,12 @@ export default function Example() {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
                     <a href="./register" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create an account
+                      Crea una Cuenta
                     </a>
                   </div>
                   <div className="flow-root">
                     <a href="./login" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                      Iniciar Sesion
                     </a>
                   </div>
                 </div>
@@ -281,10 +228,10 @@ export default function Example() {
 
                 <div className="flex items-center space-x-6">
                   <a href="./login" className="text-sm font-medium text-white hover:text-gray-100">
-                    Sign in
+                    Iniciar Sesion
                   </a>
                   <a href="./register" className="text-sm font-medium text-white hover:text-gray-100">
-                    Create an account
+                    Crear una Cuenta
                   </a>
                 </div>
               </div>
@@ -300,7 +247,7 @@ export default function Example() {
                       <a href="#">
                         <span className="sr-only">Your Company</span>
                         <img
-                          className="h-14 w-auto"
+                          className="h-16 w-auto"
                           src="https://imgur.com/Lvbu5Sv.png"
                           alt=""
                         />
@@ -388,23 +335,16 @@ export default function Example() {
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                       </button>
 
-                      {/* Search */}
-                      <a href="#" className="ml-2 p-2 text-white">
-                        <span className="sr-only">Search</span>
-                        <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
-                      </a>
+                      {/* Search movile*/}
                     </div>
 
                     {/* Logo (lg-) */}
                     <a href="#" className="lg:hidden">
                       <span className="sr-only">Your Company</span>
-                      <img src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" className="h-8 w-auto" />
+                      <img src="https://imgur.com/Lvbu5Sv.png" alt="" className="h-8 w-auto" />
                     </a>
-
+                    {/* Search desk */}
                     <div className="flex flex-1 items-center justify-end">
-                      <a href="#" className="hidden text-sm font-medium text-white lg:block">
-                        Search
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -414,7 +354,7 @@ export default function Example() {
         </header>
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">Tekne: Energizando el Futuro con Automatización de Vanguardia </h1>
+          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">Tekne Solutions: Energizando el Futuro con Automatización de Vanguardia </h1>
           <p className="mt-4 text-xl text-white">
           Pioneros en Subestaciones y Automatización Industrial ¡Disfruta tu visita!.
           </p>
@@ -432,10 +372,10 @@ export default function Example() {
         <section aria-labelledby="category-heading" className="pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
           <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
             <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
-              Shop by Category
+              Servicios por Categoria
             </h2>
             <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-              Browse all categories
+              Buscar todas las Categorias
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
@@ -489,19 +429,16 @@ export default function Example() {
             <div className="relative bg-gray-900 bg-opacity-75 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
               <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
                 <h2 id="social-impact-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  <span className="block sm:inline">Level up</span>
-                  <span className="block sm:inline">your desk</span>
+                  <span className="block sm:inline">Ensamble y Diseño de Tableros de Control y Distribución</span>
                 </h2>
                 <p className="mt-3 text-xl text-white">
-                  Make your desk beautiful and organized. Post a picture to social media and watch it get more likes
-                  than life-changing announcements. Reflect on the shallow nature of existence. At least you have a
-                  really nice desk setup.
+                Ofrecemos diseño y ensamble de tableros de control y distribución en baja tensión, adaptados a las necesidades y requerimientos específicos del cliente y el proceso. Nuestros productos cumplen con altos estándares de calidad y utilizan materiales certificados y aprobados según las normativas RETIE y NTC 2050.
                 </p>
                 <a
-                  href="#"
+                  href="./services"
                   className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
                 >
-                  Shop Workspace
+                  Ver
                 </a>
               </div>
             </div>
@@ -514,10 +451,10 @@ export default function Example() {
           className="mx-auto max-w-xl px-4 pt-24 sm:px-6 sm:pt-32 lg:max-w-7xl lg:px-8"
         >
           <h2 id="collection-heading" className="text-2xl font-bold tracking-tight text-gray-900">
-            Shop by Collection
+            Otros Servicios
           </h2>
           <p className="mt-4 text-base text-gray-500">
-            Each season, we collaborate with world-class designers to create a collection inspired by the natural world.
+          "Explora nuestro Sitio y descubre una amplia variedad de recursos, productos y servicios diseñados para satisfacer tus necesidades. Ya sea que busques información, soluciones prácticas o inspiración, estamos aquí para ayudarte. Navega con facilidad y encuentra exactamente lo que necesitas."
           </p>
 
           <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">
@@ -540,76 +477,76 @@ export default function Example() {
           </div>
         </section>
 
-        {/* Featured section */}
         <section aria-labelledby="comfort-heading" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
-          <div className="relative overflow-hidden rounded-lg">
-            <div className="absolute inset-0">
-              <img
-                src="https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-02.jpg"
-                alt=""
-                className="h-full w-full object-cover object-center"
-              />
-            </div>
-            <div className="relative bg-gray-900 bg-opacity-75 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
-              <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-                <h2 id="comfort-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Simple productivity
-                </h2>
-                <p className="mt-3 text-xl text-white">
-                  Endless tasks, limited hours, a single piece of paper. Not really a haiku, but we're doing our best
-                  here. No kanban boards, burndown charts, or tangled flowcharts with our Focus system. Just the
-                  undeniable urge to fill empty circles.
-                </p>
-                <a
-                  href="#"
-                  className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
-                >
-                  Shop Focus
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="relative overflow-hidden rounded-lg">
+    <div className="absolute inset-0">
+      <img
+        src="https://www.fundacionendesa.org/content/dam/fundacion-endesa-com/actividadesyvisitas/hero-subestaciones-electricas.jpg"
+        alt=""
+        className="h-full w-full object-cover object-center"
+      />
+    </div>
+    <div className="relative bg-gray-900 bg-opacity-75 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
+      <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
+        <h2 id="comfort-heading" className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          Venta y Suministro de Materiales
+        </h2>
+        <ul className="mt-3 text-xl text-white">
+          <li>Proveemos y suministramos materiales de control y fungibles para tableristas, incluyendo:</li>
+          <li>- Bornes en todas sus líneas, control y fuerza.</li>
+          <li>- Cables de control y fuerza con certificación de marcas reconocidas.</li>
+          <li>- Terminales de control y potencia en marcas certificadas.</li>
+        </ul>
+        <a
+          href="./services"
+          className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
+        >
+          Ver
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
       </main>
       
       {/* Logo Clouds */}
-      <div className="bg-white py-24 sm:py-32">
+      <div className="bg-gradient-to-b from-gray-900 to-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-          Trusted by the world’s most innovative teams
+        <h2 className="text-center text-lg font-semibold leading-8 text-white">
+          Con la confianza de las compañías más innovadoras del mundo
         </h2>
         <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <img
-            className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
-            src="https://1000marcas.net/wp-content/uploads/2019/12/Siemens-Logo.png"
+            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
+            src="https://axongroup.com.co/wp-content/uploads/logo-axon-group-blanco.svg"
             alt="Transistor"
             width={158}
             height={48}
           />
           <img
-            className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
-            src="https://seeklogo.com/images/G/general-electric-logo-B7E7917A72-seeklogo.com.png"
+            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
+            src="https://www.ebsa.com.co/images/logo/logo.png"
             alt="Reform"
             width={158}
             height={48}
           />
           <img
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src="data:image/png;base64,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"
+            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
+            src="https://lirp.cdn-website.com/9f80eacf/dms3rep/multi/opt/logo-blanco-162w.png"
             alt="Tuple"
             width={158}
             height={48}
           />
           <img
-            className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Hitachi_logo.svg/2560px-Hitachi_logo.svg.png"
+            className="col-span-2 max-h-20 w-full object-contain sm:col-start-2 lg:col-span-1"
+            src="https://disico.com.co/wp-content/uploads/2020/05/Logo-DISICO.webp"
             alt="SavvyCal"
             width={158}
             height={48}
           />
           <img
-            className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Schneider-Electric-Logo.jpg/1024px-Schneider-Electric-Logo.jpg"
+            className="col-span-2 col-start-2 max-h-20 w-full object-contain sm:col-start-auto lg:col-span-1"
+            src="https://www.rymsoluciones.net/logorm.png"
             alt="Statamic"
             width={158}
             height={48}
@@ -619,77 +556,70 @@ export default function Example() {
     </div>
 
       {/* footer */}
-      <footer aria-labelledby="footer-heading" className="bg-gray-900">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="py-20 xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-              <div className="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
-                <div>
-                  <h3 className="text-sm font-medium text-white">Shop</h3>
-                  <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.shop.map((item) => (
-                      <li key={item.name} className="text-sm">
-                        <a href={item.href} className="text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium text-white">Company</h3>
-                  <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.company.map((item) => (
-                      <li key={item.name} className="text-sm">
-                        <a href={item.href} className="text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="space-y-12 md:grid md:grid-cols-2 md:gap-8 md:space-y-0">
-                <div>
-                  <h3 className="text-sm font-medium text-white">Account</h3>
-                  <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.account.map((item) => (
-                      <li key={item.name} className="text-sm">
-                        <a href={item.href} className="text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-sm font-medium text-white">Connect</h3>
-                  <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.connect.map((item) => (
-                      <li key={item.name} className="text-sm">
-                        <a href={item.href} className="text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 py-10">
-            <p className="text-sm text-gray-400">Copyright &copy; 2024 Tekne</p>
-          </div>
+<footer aria-labelledby="footer-heading" className="bg-gray-900">
+  <h2 id="footer-heading" className="sr-only">Footer</h2>
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="py-20 xl:flex xl:justify-center xl:gap-8">
+      <div className="grid grid-cols-2 gap-8 xl:grid-cols-4 xl:gap-16 text-center">
+        <div className="space-y-12">
+          <h3 className="text-sm font-medium text-white">Comprar</h3>
+          <ul role="list" className="mt-6 space-y-6">
+            {footerNavigation.Comprar.map((item) => (
+              <li key={item.name} className="text-sm">
+                <a href={item.href} className="text-gray-300 hover:text-white">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-      </footer>
+        <div className="space-y-12">
+          <h3 className="text-sm font-medium text-white">Compañia</h3>
+          <ul role="list" className="mt-6 space-y-6">
+            {footerNavigation.company.map((item) => (
+              <li key={item.name} className="text-sm">
+                <a href={item.href} className="text-gray-300 hover:text-white">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="space-y-12">
+          <h3 className="text-sm font-medium text-white">Cuenta</h3>
+          <ul role="list" className="mt-6 space-y-6">
+            {footerNavigation.account.map((item) => (
+              <li key={item.name} className="text-sm">
+                <a href={item.href} className="text-gray-300 hover:text-white">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="space-y-12">
+          <h3 className="text-sm font-medium text-white">Conectar</h3>
+          <ul role="list" className="mt-6 space-y-6">
+            {footerNavigation.connect.map((item) => (
+              <li key={item.name} className="text-sm">
+                <a href={item.href} className="text-gray-300 hover:text-white">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className="border-t border-gray-800 py-10 text-center">
+      <p className="text-sm text-gray-400">Copyright &copy; 2024 Tekne</p>
+    </div>
+  </div>
+</footer>
       
       {/* WhatsApp bottom */}
       <div className="fixed bottom-10 right-10 z-10">
-          <a href="https://api.whatsapp.com/send?phone=+573115042426&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+          <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
           </a>
       </div>

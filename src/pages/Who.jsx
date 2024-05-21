@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function who() {
+function Who() {
   return (
-    <div className="bg-white">
+    <div className="bg-white min-h-screen flex flex-col">
       {/* Header */}
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <header className="fixed inset-x-0 top-0 z-50 bg-[#111827] shadow-md">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-12 w-auto" src="https://imgur.com/rSBYkDq" alt="" />
+              <img className="h-14 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Your Company Logo" />
             </a>
           </div>
         </nav>
@@ -43,7 +43,7 @@ function who() {
                 <div className="mt-14 lg:mt-0 lg:ml-16">
                   <div className="bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] bg-opacity-30 rounded-xl p-10">
                     <h2 className="text-lg font-semibold text-white">Tu Socio en Ingeniería de Subestaciones Eléctricas</h2>
-                    <p className="mt-4 text-base text-white">En Tekne, nos especializamos en proporcionar soluciones de ingeniería de vanguardia para subestaciones eléctricas. Con una sólida experiencia, un compromiso inquebrantable con la calidad y un enfoque centrado en el cliente, nos comprometemos a ser tu socio confiable en cada etapa del proceso. Desde el diseño hasta la implementación y el mantenimiento, estamos aquí para ayudarte a alcanzar el éxito en tus proyectos eléctricos. Confía en nosotros para ofrecerte soluciones innovadoras y eficientes que impulsen el crecimiento y la eficiencia de tu infraestructura eléctrica.</p>
+                    <p className="mt-4 text-base text-white">En Tekne, nos especializamos en proporcionar soluciones de ingeniería de vanguardia para subestaciones eléctricas. Con una sólida experiencia, un compromiso inquebrantable con la calidad y un enfoque centrado en el cliente.</p>
                   </div>
                 </div>
               </div>
@@ -53,19 +53,19 @@ function who() {
 
                 {/* Mission and Vision */}
                 <section className="relative py-24">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl font-semibold text-gray-900">Misión</h2>
-                <p className="mt-4 text-lg text-gray-600">Nuestra misión es proporcionar a nuestros clientes acceso a oportunidades de inversión de alta calidad, con un enfoque en proyectos inmobiliarios en mercados sólidos y con potencial de crecimiento sostenido. Nos esforzamos por ofrecer un servicio excepcional, respaldado por un equipo experimentado y una rigurosa selección de proyectos.</p>
-              </div>
-              <div>
-                <h2 className="text-3xl font-semibold text-gray-900">Visión</h2>
-                <p className="mt-4 text-lg text-gray-600">Nuestra visión es convertirnos en la plataforma de referencia para inversores que buscan oportunidades inmobiliarias de calidad en mercados emergentes y establecidos. Aspiramos a ser reconocidos por nuestra integridad, transparencia y excelencia en el servicio al cliente, estableciendo relaciones a largo plazo basadas en la confianza y el éxito mutuo.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-y-0 items-start">
+      <div className="flex flex-col">
+        <h2 className="text-3xl font-semibold text-gray-900">Misión</h2>
+        <p className="mt-4 text-lg text-gray-600">Nuestra misión es entregar productos y servicios de excelencia y alta calidad, impulsando el desarrollo de proyectos de ingeniería y montajes eléctricos, así como de instrumentación y control automático. Además, ofrecemos una amplia gama de materiales, suministros y equipos eléctricos de vanguardia. Todo esto se realiza con un enfoque centrado en el cliente, utilizando tecnología de punta para garantizar el máximo beneficio. Nos comprometemos a mantener una revisión constante de nuestros procesos y riesgos en todas nuestras áreas, en búsqueda perpetua de la mejora continua y la excelencia en cada paso del proceso.</p>
+      </div>
+      <div className="flex flex-col">
+        <h2 className="text-3xl font-semibold text-gray-900">Visión</h2>
+        <p className="mt-4 text-lg text-gray-600">Nuestra visión es ser reconocidos por nuestra excelencia operativa y servicio al cliente excepcional, manteniendo siempre una cultura de mejora continua y un enfoque inflexible en la satisfacción del cliente. Aspiramos a ser referentes en la industria, estableciendo nuevos estándares de calidad y eficiencia, y contribuyendo al éxito y crecimiento sostenible de nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="relative pb-32">
   <div className="absolute inset-x-0 top-0 transform-gpu -translate-y-1/2 flex justify-center" aria-hidden="true">
@@ -110,7 +110,7 @@ function who() {
                   <img className="w-full h-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh3hXnE0vHfeNh-IUf6B-CMCmzg1hQKgpB-g&usqp=CAU" alt="Profile of a woman" />
                 </div>
                 <div className="text-lg font-semibold text-gray-900">María López</div>
-                <div className="text-gray-600">"Nuestra colaboración con el equipo de ingeniería en automática industrial ha sido excepcional. Su enfoque meticuloso y su capacidad para entender nuestras necesidades específicas nos han permitido implementar soluciones innovadoras que han transformado por completo nuestros procesos de producción. Desde el diseño inicial hasta la implementación final, su profesionalismo y atención al detalle han sido evidentes en cada etapa del proyecto. Gracias a su experiencia y dedicación, hemos logrado mejorar significativamente la eficiencia y la calidad de nuestra línea de producción. ¡Recomendaría sin dudarlo sus servicios a cualquier empresa que busque innovación y excelencia en ingeniería!"</div>
+                <div className="text-gray-600">"Nuestra colaboración con TEKNE SOLUCIONES ha sido excepcional. Su enfoque meticuloso y su capacidad para comprender nuestras necesidades específicas nos han permitido implementar soluciones eléctricas en tiempo récord.Desde el diseño inicial hasta la implementación final, su profesionalismo y atención al detalle han sido evidentes en cada etapa del proyecto. Gracias a su experiencia y dedicación, hemos logrado mejorar significativamente la eficiencia y la calidad de nuestros proyectos eléctricos."</div>
               </div>
               <div className="flex flex-col items-center space-y-6">
                 <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-100">
@@ -140,11 +140,6 @@ function who() {
               <a href="#" className="text-base text-gray-300 hover:text-white">Equipo</a>
               <a href="#" className="text-base text-gray-300 hover:text-white">Carreras</a>
               <a href="#" className="text-base text-gray-300 hover:text-white">Contacto</a>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <div className="text-lg font-semibold text-white">Inversiones</div>
-              <a href="#" className="text-base text-gray-300 hover:text-white">Bienes Raíces</a>
-              <a href="#" className="text-base text-gray-300 hover:text-white">Mercado Financiero</a>
             </div>
             <div className="flex flex-col space-y-4">
               <div className="text-lg font-semibold text-white">Legal</div>
@@ -181,4 +176,4 @@ function who() {
   );
 }
 
-export default who;
+export default Who;
