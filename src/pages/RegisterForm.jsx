@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const RegisterForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Nombre:', name);
-    console.log('Correo electrónico:', email);
-    console.log('Contraseña:', password);
+
+    try {
+      const response = await axios.post('http://localhost:3000/register', {
+        name,
+        email,
+        password,
+      });
+
+      if (response.status === 201) {
+        // Registro exitoso
+        setSuccess('Registro exitoso. Por favor, inicie sesión.');
+        setError('');
+      }
+    } catch (err) {
+      setError('Hubo un problema con el registro. Por favor, inténtelo de nuevo.');
+      setSuccess('');
+    }
   };
 
   return (
@@ -17,6 +34,8 @@ const RegisterForm = () => {
       <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md">
         <div className="px-6 py-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Regístrate</h2>
+          {error && <p className="text-red-500">{error}</p>}
+          {success && <p className="text-green-500">{success}</p>}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre</label>
