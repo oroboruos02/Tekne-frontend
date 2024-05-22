@@ -11,6 +11,8 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log('Datos enviados:', { name, email, password });
+
     try {
       const response = await axios.post('http://localhost:3000/register', {
         name,
@@ -19,7 +21,6 @@ const RegisterForm = () => {
       });
 
       if (response.status === 201) {
-        // Registro exitoso
         setSuccess('Registro exitoso. Por favor, inicie sesión.');
         setError('');
       }

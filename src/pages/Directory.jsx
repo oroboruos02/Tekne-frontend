@@ -158,18 +158,6 @@ function Directory() {
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="fixed inset-x-0 top-0 z-50 bg-[#111827] shadow-md">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Tekne</span>
-              <img className="h-14 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Tekne Logo" />
-            </a>
-          </div>
-        </nav>
-      </header>
-
       <main className="flex-grow mt-24 p-6">
         <h1 className="text-4xl font-bold text-center mb-6">Directorio de Automatización Subestaciones Eléctricas</h1>
         {renderTable('Automatización Subestaciones Electricas', companies)}

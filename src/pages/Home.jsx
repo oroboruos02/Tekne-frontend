@@ -1,7 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Fragment, useState } from 'react';
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
 import {Bars3Icon,XMarkIcon,} from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+import Menu from '../components/Menu';
+import Banner from '../components/Banner';
 
 const navigation = {
   categories: [
@@ -21,23 +25,31 @@ const categories = [
     name: 'Suministro de Personal Técnico',
     href: './Services',
     imageSrc: 'https://www.glingenieros.com.co/wp-content/uploads/2020/09/subestacion-elec31.jpg',
+    description: 'Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos.',
   },
   {
     name: 'Comunicaciones',
     href: './Services',
     imageSrc: 'https://www.coinsi.com/wp-content/uploads/2021/09/COINSI-SUBESTACIONES-scaled.jpg',
+    description: 'Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6).',
   },
   {
     name: 'Montaje Electromecánico',
     href: './Services',
     imageSrc: 'https://d100mj7v0l85u5.cloudfront.net/s3fs-public/tableros-y-subestaciones-electricas-de-GL-Ingenieros-122147-g.jpg',
+    description: 'Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables.',
   },
   {
     name: 'Cableado y Conexionado',
     href: './Services',
     imageSrc: 'https://rentadeplantas.com.mx/wp-content/uploads/2021/08/fallas-comunes-subestaciones-electricas.jpg',
+    description: 'Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos.',
   },
-  { name: 'Mantenimiento', href: './Services', imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1TzOXv_Ved3pAkBPiKzE5J2saU-Umw-xhA&usqp=CAU' },
+  { name: 'Mantenimiento',
+    href: './Services',
+    imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1TzOXv_Ved3pAkBPiKzE5J2saU-Umw-xhA&usqp=CAU',
+    description: 'Ofrecemos servicios de mantenimiento y pruebas eléctricas en equipos de corte y protección en baja, media y alta tensión',
+   },
 ]
 const collections = [
   {
@@ -81,129 +93,10 @@ const footerNavigation = {
   ],
 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className="bg-white">
-      {/* Mobile menu */}
-      <Transition.Root show={mobileMenuOpen} as={Fragment}>
-        <Dialog className="relative z-40 lg:hidden" onClose={setMobileMenuOpen}>
-          <Transition.Child
-            as={Fragment}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
-          </Transition.Child>
-
-          <div className="fixed inset-0 z-40 flex">
-            <Transition.Child
-              as={Fragment}
-              enter="transition ease-in-out duration-300 transform"
-              enterFrom="-translate-x-full"
-              enterTo="translate-x-0"
-              leave="transition ease-in-out duration-300 transform"
-              leaveFrom="translate-x-0"
-              leaveTo="-translate-x-full"
-            >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
-                <div className="flex px-4 pb-2 pt-5">
-                  <button
-                    type="button"
-                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-
-                {/* Links */}
-                <Tab.Group as="div" className="mt-2">
-                  <div className="border-b border-gray-200">
-                    <Tab.List className="-mb-px flex space-x-8 px-4">
-                      {navigation.categories.map((category) => (
-                        <Tab
-                          key={category.name}
-                          className={({ selected }) =>
-                            classNames(
-                              selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-900',
-                              'flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium'
-                            )
-                          }
-                        >
-                          {category.name}
-                        </Tab>
-                      ))}
-                    </Tab.List>
-                  </div>
-                  <Tab.Panels as={Fragment}>
-                    {navigation.categories.map((category) => (
-                      <Tab.Panel key={category.name} className="space-y-12 px-4 py-6">
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-10">
-                          {category.featured.map((item) => (
-                            <div key={item.name} className="group relative">
-                              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
-                              </div>
-                              <a href={item.href} className="mt-6 block text-sm font-medium text-gray-900">
-                                <span className="absolute inset-0 z-10" aria-hidden="true" />
-                                {item.name}
-                              </a>
-                              <p aria-hidden="true" className="mt-1 text-sm text-gray-500">
-                                Ir
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </Tab.Panel>
-                    ))}
-                  </Tab.Panels>
-                </Tab.Group>
-
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
-                      <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
-                        {page.name}
-                      </a>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  <div className="flow-root">
-                    <a href="./register" className="-m-2 block p-2 font-medium text-gray-900">
-                      Crea una Cuenta
-                    </a>
-                  </div>
-                  <div className="flow-root">
-                    <a href="./login" className="-m-2 block p-2 font-medium text-gray-900">
-                      Iniciar Sesion
-                    </a>
-                  </div>
-                </div>
-
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
-                  {/* Currency selector */}
-                  <form>
-                  </form>
-                </div>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
-        </Dialog>
-      </Transition.Root>
-
       {/* Hero section */}
       <div className="relative bg-gray-900">
         {/* Decorative image and overlay */}
@@ -221,150 +114,27 @@ export default function Example() {
           <nav aria-label="Top">
             {/* Top navigation */}
             <div className="bg-gray-900">
-              <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
                 {/* Currency selector */}
                 <form>
                 </form>
 
                 <div className="flex items-center space-x-6">
-                  <a href="./login" className="text-sm font-medium text-white hover:text-gray-100">
+                  <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Iniciar Sesion
-                  </a>
-                  <a href="./register" className="text-sm font-medium text-white hover:text-gray-100">
+                  </Link>
+                  <Link to="/register" className="text-sm font-medium text-white hover:text-gray-100">
                     Crear una Cuenta
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Secondary navigation */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div>
-                  <div className="flex h-16 items-center justify-between">
-                    {/* Logo (lg+) */}
-                    <div className="hidden lg:flex lg:flex-1 lg:items-center">
-                      <a href="#">
-                        <span className="sr-only">Your Company</span>
-                        <img
-                          className="h-16 w-auto"
-                          src="https://imgur.com/Lvbu5Sv.png"
-                          alt=""
-                        />
-                      </a>
-                    </div>
-
-                    <div className="hidden h-full lg:flex">
-  {/* Flyout menus */}
-  <Popover.Group className="inset-x-0 bottom-0 px-4">
-    <div className="flex h-full justify-center space-x-8">
-      {navigation.pages.map((page) => (
-        <a key={page.name} href={page.href} className="flex items-center text-sm font-medium text-white">
-          {page.name}
-        </a>
-      ))}
-
-      {navigation.categories.map((category) => (
-        <Popover key={category.name} className="flex">
-          {({ open }) => (
-            <>
-              <div className="relative flex">
-                <Popover.Button className="relative z-10 flex items-center justify-center text-sm font-medium text-white transition-colors duration-200 ease-out">
-                  {category.name}
-                  <span
-                    className={classNames(
-                      open ? 'bg-white' : '',
-                      'absolute inset-x-0 -bottom-px h-0.5 transition duration-200 ease-out'
-                    )}
-                    aria-hidden="true"
-                  />
-                </Popover.Button>
-              </div>
-
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
-                  {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
-                  <div className="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true" />
-
-                  <div className="relative bg-white">
-                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                      <div className="grid grid-cols-4 gap-x-8 gap-y-10 py-16">
-                        {category.featured.map((item) => (
-                          <div key={item.name} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
-                              <img
-                                src={item.imageSrc}
-                                alt={item.imageAlt}
-                                className="object-cover object-center"
-                              />
-                            </div>
-                            <a href={item.href} className="mt-4 block font-medium text-gray-900">
-                              <span className="absolute inset-0 z-10" aria-hidden="true" />
-                              {item.name}
-                            </a>
-                            <p aria-hidden="true" className="mt-1">
-                              Ir
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </Popover.Panel>
-              </Transition>
-            </>
-          )}
-        </Popover>
-      ))}
-    </div>
-  </Popover.Group>
-</div>
-
-                    {/* Mobile menu and search (lg-) */}
-                    <div className="flex flex-1 items-center lg:hidden">
-                      <button type="button" className="-ml-2 p-2 text-white" onClick={() => setMobileMenuOpen(true)}>
-                        <span className="sr-only">Open menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                      </button>
-
-                      {/* Search movile*/}
-                    </div>
-
-                    {/* Logo (lg-) */}
-                    <a href="#" className="lg:hidden">
-                      <span className="sr-only">Your Company</span>
-                      <img src="https://imgur.com/Lvbu5Sv.png" alt="" className="h-8 w-auto" />
-                    </a>
-                    {/* Search desk */}
-                    <div className="flex flex-1 items-center justify-end">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Menu/>
           </nav>
         </header>
-
-        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">Hacemos de tu proyecto nuestro compromiso</h1>
-          <p className="mt-4 text-xl text-white">
-          Pioneros en Subestaciones y Automatización Industrial ¡Disfruta tu visita!.
-          </p>
-          <a
-            href="./contact"
-            className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-          >
-            Contáctenos
-          </a>
-        </div>
+        <Banner />
       </div>
 
       <main>
@@ -375,39 +145,47 @@ export default function Example() {
               Servicios por Categoria
             </h2>
             <a href="#" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
-              Buscar todas las Categorias
+              ver mas servicios
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
 
           <div className="mt-4 flow-root">
-            <div className="-my-2">
-              <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
-                <div className="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
-                  {categories.map((category) => (
-                    <a
-                      key={category.name}
-                      href={category.href}
-                      className="relative flex h-80 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
-                    >
-                      <span aria-hidden="true" className="absolute inset-0">
-                        <img src={category.imageSrc} alt="" className="h-full w-full object-cover object-center" />
-                      </span>
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
-                      />
-                      <span className="relative mt-auto text-center text-xl font-bold text-white">{category.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
+  <div className="-my-2">
+    <div className="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible">
+      <div className="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-5 xl:gap-x-8 xl:space-x-0 xl:px-0">
+        {categories.map((category) => (
+          <a
+            key={category.name}
+            href={category.href}
+            className="relative flex flex-col h-80 w-56 overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto"
+          >
+            <span aria-hidden="true" className="absolute inset-0">
+              <img
+                src={category.imageSrc}
+                alt=""
+                className="h-full w-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+            </span>
+            <div className="relative flex flex-col justify-start h-full">
+              <span className="text-xl font-bold text-white mt-4">
+                {category.name}
+              </span>
+              <p className="text-white mt-2">
+                {category.description}
+              </p>
             </div>
-          </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
           <div className="mt-6 px-4 sm:hidden">
             <a href="#" className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
-              Browse all categories
+              ver mas servicios
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
@@ -454,7 +232,7 @@ export default function Example() {
             Otros Servicios
           </h2>
           <p className="mt-4 text-base text-gray-500">
-          "Explora nuestro Sitio y descubre una amplia variedad de recursos, productos y servicios diseñados para satisfacer tus necesidades. Ya sea que busques información, soluciones prácticas o inspiración, estamos aquí para ayudarte. Navega con facilidad y encuentra exactamente lo que necesitas."
+          &quot;Explora nuestro Sitio y descubre una amplia variedad de recursos, productos y servicios diseñados para satisfacer tus necesidades. Ya sea que busques información, soluciones prácticas o inspiración, estamos aquí para ayudarte. Navega con facilidad y encuentra exactamente lo que necesitas.&quot;
           </p>
 
           <div className="mt-10 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:space-y-0">

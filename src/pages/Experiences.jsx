@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Banner from '../components/Banner';
 
 function Experiences() {
 
@@ -11,18 +12,7 @@ function Experiences() {
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="fixed inset-x-0 top-0 z-50 bg-[#111827] shadow-md">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
-            <a href="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img className="h-14 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Your Company Logo" />
-            </a>
-          </div>
-        </nav>
-      </header>
-
+      <Banner/>
       {/* Main Content */}
       <main className="mt-20 px-4 lg:px-0 lg:mt-24"> {/* Ajuste de margen superior */}
         <div className="max-w-3xl mx-auto">

@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Directory from './pages/Directory';
 import Experiences from './pages/Experiences';
 import 'tailwindcss/tailwind.css';
+import CommonComponents from './CommonComponents';
 
 function App() {
   return (
@@ -18,10 +19,13 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/who" element={<Who />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/directory" element={<Directory />} />
-        <Route path="/experiences" element={<Experiences />} />
+
+        <Route element={ <CommonComponents /> }>
+          <Route path="/who" element={<Who />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/directory" element={<Directory />} />
+          <Route path="/experiences" element={<Experiences />} />
+        </Route>
       </Routes>
     </Router>
   );

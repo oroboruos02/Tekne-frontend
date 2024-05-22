@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Importa useHistory de react-router-dom
 
-export default function Example() {
+function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Obtiene el objeto history para el enrutamiento
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/login', { username: email, password });
+      const response = await axios.post('http://localhost:3000/login', { email, password });
       if (response.status === 200) {
-        // Redirigir al usuario a la vista del directorio
-        window.location.href = '/directory';
+        
+        // Redirigir al usuario a la vista del dashboard después del inicio de sesión exitoso
+        navigate('/dashboard');
       }
     } catch (err) {
       setError('Usuario o contraseña incorrectos');
@@ -172,3 +175,5 @@ export default function Example() {
     </>
   );
 }
+
+export default LoginForm;
