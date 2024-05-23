@@ -8,6 +8,7 @@ import Who from './pages/Who';
 import Services from './pages/Services';
 import Directory from './pages/Directory';
 import Experiences from './pages/Experiences';
+import Dashboard from './pages/Dashboard';
 import 'tailwindcss/tailwind.css';
 import CommonComponents from './CommonComponents';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         <Route element={ <CommonComponents /> }>
           <Route path="/who" element={<Who />} />

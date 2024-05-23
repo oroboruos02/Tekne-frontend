@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
-  // Simulando datos de empresas
+  const [user, setUser] = useState(null);
   const [companies] = useState([
     { id: 1, name: 'Axon Group Ltda' },
     { id: 2, name: 'HMV Ingenerios' },
@@ -14,36 +14,33 @@ const Dashboard = () => {
     { id: 8, name: 'Acovis' }
   ]);
 
-  // Función para manejar la calificación de una empresa
-  const handleRatingChange = (companyId, rating) => {
-    // Aquí iría la lógica para enviar la calificación al backend
-    console.log(`Empresa ${companyId} calificada con ${rating} estrellas`);
-  };
+  useEffect(() => {
+    // Simular inicio de sesión al cargar la página
+    const loggedInUser = { name: 'Usuario' };
+    setUser(loggedInUser);
+  }, []);
 
   return (
-
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between mb-4">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between items-center py-4">
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        {/* Botón para salir y regresar a la home */}
         <Link to="/" className="bg-blue-500 text-white px-4 py-2 rounded-md">Salir</Link>
       </div>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="p-4 bg-white shadow rounded-lg">
-          <h2 className="text-xl font-semibold mb-2">Panel de Calificaciones</h2>
-          <div className="flex flex-col space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4">Panel de Calificaciones</h2>
+          <div className="space-y-4">
             {companies.map(company => (
-              <div key={company.id} className="flex items-center justify-between border-b py-2">
+              <div key={company.id} className="flex justify-between items-center border-b py-2">
                 <span>{company.name}</span>
-                {/* Componente de calificación de estrellas */}
-                <StarRating companyId={company.id} onRatingChange={rating => handleRatingChange(company.id, rating)} />
+                <StarRating />
               </div>
             ))}
           </div>
         </div>
-        <div className="p-4 bg-white shadow rounded-lg">
-          <h2 className="text-xl font-semibold mb-2">Tabla de Empresas</h2>
-          <table className="table-auto w-full">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold mb-4">Tabla de Empresas</h2>
+          <table className="w-full">
             <thead>
               <tr>
                 <th className="px-4 py-2">ID</th>
@@ -65,18 +62,17 @@ const Dashboard = () => {
   );
 };
 
-// Componente de calificación de estrellas
-const StarRating = ({ companyId, onRatingChange }) => {
+const StarRating = () => {
   const [rating, setRating] = useState(0);
 
   const handleClick = (value) => {
     setRating(value);
     // Enviar la calificación al backend
-    onRatingChange(companyId, value);
+    console.log(`Calificaste con ${value} estrellas`);
   };
 
   return (
-    <div>
+    <div className="flex">
       {[...Array(5)].map((_, index) => (
         <span
           key={index}

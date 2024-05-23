@@ -3,7 +3,7 @@ import Menu from "./Menu"
 
 const Header = () => {
     return(
-        <header className="fixed inset-x-0 top-0 z-50 bg-[#111827] shadow-md">
+        <header className="inset-x-0 top-0 z-50 bg-[#070b17] shadow-md">
             <Menu />
         </header>
     )
