@@ -58,7 +58,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6), garantizando una comunicación eficiente y segura en entornos industriales.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="htt./img3.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img3.png" alt="Pruebas" />
               </div>
             </div>
 

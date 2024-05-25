@@ -52,21 +52,21 @@ const collections = [
   {
     name: 'Control Industrial',
     href: './Services',
-    imageSrc: '../../public/src/img2.png',
+    imageSrc: './img2.png',
     imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
     description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
   },
   {
     name: 'Instrumentación',
     href: './Services',
-    imageSrc: '../../public/src/img4.png',
+    imageSrc: './img4.png',
     imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     description: 'Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.',
   },
   {
     name: 'Áreas Clasificadas',
     href: './Services',
-    imageSrc: '../../public/src/img5.png',
+    imageSrc: './img5.png',
     imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
     description: 'Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof.',
   },
@@ -99,7 +99,7 @@ export default function Example() {
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img
-            src="../../public/src/img1.png"
+            src="https://www.tecsaqro.com.mx/wp-content/uploads/2020/08/mantenimiento_subestaciones_electricas.jpg"
             alt=""
             className="h-full w-full object-cover object-center"
           />
@@ -118,10 +118,10 @@ export default function Example() {
 
                 <div className="flex items-center space-x-6">
                   <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
-                    Iniciar sesion
+                    Iniciar Sesion
                   </Link>
                   <Link to="/register" className="text-sm font-medium text-white hover:text-gray-100">
-                    Crear una cuenta
+                    Crear una Cuenta
                   </Link>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Example() {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src="../../public/src/img1.png"
+                src="./img1.png"
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
