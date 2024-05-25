@@ -36,7 +36,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos, asegurando la excelencia en la ejecución de cada proyecto.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img2.png" alt="Servicios de Diseño" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./img1.png" alt="Servicios de Diseño" />
           </div>
   </div>
 
@@ -47,7 +47,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales, cumpliendo con las normas y estándares nacionales e internacionales, así como con los requerimientos específicos de cada cliente.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img3.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img2.png" alt="Retrofit" />
               </div>
             </div>
 
@@ -58,7 +58,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6), garantizando una comunicación eficiente y segura en entornos industriales.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="htt../../public/src/img4.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="htt./img3.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -70,7 +70,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables de acuerdo a los requerimientos de las instalaciones industriales, asegurando un montaje electromecánico eficiente y seguro.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img5.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img4.png" alt="Retrofit" />
               </div>
             </div>
 
@@ -81,7 +81,7 @@ function Services() {
             <p className="mt-4 text-lg text-gray-600">Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos, cumpliendo con los requerimientos específicos de cada cliente.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img6.png" alt="Retrofit" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./img5.png" alt="Retrofit" />
           </div>
         </div>
 
@@ -92,7 +92,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.</p>
           </div>
             <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img7.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img6.png" alt="Retrofit" />
               </div>
             </div>
 
@@ -103,7 +103,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof. Además, proporcionamos accesorios y cajas certificadas bajo las normas NEMA 4X y NEMA 7 clase 1 div 1 y 2.</p>
           </div>
           <div>
-              <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img8.png" alt="Retrofit" />
+              <img className="w-full h-auto rounded-md shadow-md" src="./img7.png" alt="Retrofit" />
           </div>
         </div>
 
@@ -114,7 +114,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Diseñamos y ensamblamos tableros de control, protección y medida para baja, media y alta tensión, utilizando materiales certificados y aprobados según las normativas RETIE y NTC 2050, y ajustándose a las necesidades y requerimientos específicos de cada proyecto.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img9.png" alt="Retrofit" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./img8.png" alt="Retrofit" />
           </div>
         </div>
 
@@ -135,7 +135,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
           </div>
         <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img10.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img9.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -152,7 +152,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="../../public/src/img1.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./img10.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -170,7 +170,7 @@ function Services() {
                 </ul>
               </div>
               <div>
-                
+                <img className="w-full h-auto rounded-md shadow-md" src="./img11.png" alt="Pruebas" />
               </div>
             </div>
           </div>
