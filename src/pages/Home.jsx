@@ -1,8 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { Fragment, useState } from 'react';
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
-import {Bars3Icon,XMarkIcon,} from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import Menu from '../components/Menu';
 import Banner from '../components/Banner';
@@ -55,21 +52,21 @@ const collections = [
   {
     name: 'Control Industrial',
     href: './Services',
-    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
+    imageSrc: '../../public/src/img2.png',
     imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
     description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
   },
   {
     name: 'Instrumentación',
     href: './Services',
-    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
+    imageSrc: '../../public/src/img4.png',
     imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
     description: 'Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.',
   },
   {
     name: 'Áreas Clasificadas',
     href: './Services',
-    imageSrc: 'https://images.contentstack.io/v3/assets/bltea08f3d94a418a1b/bltc4257d25ffa89304/6360183adf424e41894cc76a/Bay-Control-hero.jpg',
+    imageSrc: '../../public/src/img5.png',
     imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
     description: 'Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof.',
   },
@@ -102,7 +99,7 @@ export default function Example() {
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img
-            src="https://www.tecsaqro.com.mx/wp-content/uploads/2020/08/mantenimiento_subestaciones_electricas.jpg"
+            src="../../public/src/img1.png"
             alt=""
             className="h-full w-full object-cover object-center"
           />
@@ -121,10 +118,10 @@ export default function Example() {
 
                 <div className="flex items-center space-x-6">
                   <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
-                    Iniciar Sesion
+                    Iniciar sesion
                   </Link>
                   <Link to="/register" className="text-sm font-medium text-white hover:text-gray-100">
-                    Crear una Cuenta
+                    Crear una cuenta
                   </Link>
                 </div>
               </div>
@@ -199,7 +196,7 @@ export default function Example() {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src="https://www.tecsaqro.com.mx/wp-content/uploads/2020/08/mantenimiento_subestaciones_electricas.jpg"
+                src="../../public/src/img1.png"
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -285,7 +282,7 @@ export default function Example() {
     </div>
   </div>
 </section>
-      </main>
+</main>
       
       {/* Logo Clouds */}
       <div className="bg-gradient-to-b from-gray-900 to-white py-24 sm:py-32">

@@ -70,7 +70,7 @@ const Menu = () => {
                           "flex items-center text-sm font-medium px-3 py-2 rounded-md transition-all duration-200",
                           location.pathname === page.href && page.name !== "INICIO"
                             ? "bg-teal-600 text-white"
-                            : "text-gray-300 hover:bg-teal-700 hover:text-white hover:shadow-md"
+                            : "text-white hover:bg-teal-700 hover:text-white hover:shadow-md"
                         )}
                       >
                         {page.name}
@@ -84,18 +84,18 @@ const Menu = () => {
                     <Link
                       to="/register"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-sm font-medium text-gray-300 hover:bg-teal-700 hover:text-white transition-all duration-200 hover:shadow-md"
+                      className="block px-3 py-2 text-sm font-medium text-white hover:bg-teal-700 hover:text-white transition-all duration-200 hover:shadow-md"
                     >
-                      Crea una Cuenta
+                      Crea una cuenta
                     </Link>
                   </div>
                   <div className="flow-root">
                     <Link
                       to="/login"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-sm font-medium text-gray-300 hover:bg-teal-700 hover:text-white transition-all duration-200 hover:shadow-md"
+                      className="block px-3 py-2 text-sm font-medium text-white hover:bg-teal-700 hover:text-white transition-all duration-200 hover:shadow-md"
                     >
-                      Iniciar Sesion
+                      Iniciar sesion
                     </Link>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ const Menu = () => {
                         "flex items-center text-sm font-medium px-3 py-2 rounded-md transition-all duration-200",
                         location.pathname === page.href && page.name !== "INICIO"
                           ? "bg-teal-600 text-white"
-                          : "text-gray-700 hover:bg-teal-500 hover:text-white"
+                          : "text-white hover:bg-teal-500 hover:text-white"
                       )}
                     >
                       {page.name}
