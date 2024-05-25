@@ -7,7 +7,7 @@ function Experiences() {
   // Función para abrir el archivo PDF
   const openPDF = () => {
     // Reemplaza 'ruta_al_archivo.pdf' con la ruta de tu archivo PDF
-    window.open('../../public/Certificado.pdf', '_blank');
+    window.open('./Certificado.pdf', '_blank');
   };
 
   return (
