@@ -11,17 +11,24 @@ function LoginForm({ setUser }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    console.log('Datos enviados:', { email, password });
+
     try {
       const response = await axios.post('http://localhost:3000/login-client', { email, password });
+      console.log('Respuesta del servidor:', response);
       if (response.status === 200) {
         const userId = response.data.userId; // Obtén el ID del usuario desde la respuesta
         localStorage.setItem('user', JSON.stringify({ email, userId })); // Guarda el ID del usuario en localStorage
         setUser({ email, userId }); // Establece el usuario en el estado
-        navigate('/dashboard');
+        navigate('/dashboardclient');
       }
     } catch (err) {
-      setError('Usuario o contraseña incorrectos');
+      console.error('Error al iniciar sesión:', err);
+      if (err.response && err.response.data && err.response.data.error) {
+        setError(err.response.data.error);
+      } else {
+        setError('Error desconocido al iniciar sesión');
+      }
     }
   };
 

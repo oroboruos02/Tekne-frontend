@@ -1,9 +1,10 @@
+// StarRating.jsx
 import React, { useState } from 'react';
 
 const StarRating = ({ rating, onRating }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
-  const handleMouseOver = starRating => {
+  const handleMouseOver = (starRating) => {
     setHoverRating(starRating);
   };
 
@@ -11,7 +12,7 @@ const StarRating = ({ rating, onRating }) => {
     setHoverRating(0);
   };
 
-  const handleClick = starRating => {
+  const handleClick = (starRating) => {
     onRating(starRating);
   };
 

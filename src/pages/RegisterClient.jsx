@@ -14,7 +14,7 @@ const RegisterForm = () => {
     console.log('Datos enviados:', { name, email, password });
 
     try {
-      const response = await axios.post('http://localhost:3000/register-admin', {
+      const response = await axios.post('http://localhost:3000/register-client', {
         name,
         email,
         password,
