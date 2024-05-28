@@ -35,7 +35,7 @@ function App() {
         <Route path="/admin" element={<LoginAdmin setUser={setUser} />} />
         <Route path="/registerAdmin" element={<RegisterForm />} />
         <Route path="/registerclient" element={<RegisterClient />} />
-        <Route path="/contact" element={<Contact />} />
+        
 
         {/* Rutas protegidas basadas en el rol */}
         <Route path="/dashboardadmin" element={ <DashboardAdmin /> } />
@@ -50,6 +50,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/directory" element={<Directory />} />
           <Route path="/experiences" element={<Experiences />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>

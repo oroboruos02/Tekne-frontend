@@ -99,7 +99,7 @@ export default function Example() {
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img
-            src="https://www.tecsaqro.com.mx/wp-content/uploads/2020/08/mantenimiento_subestaciones_electricas.jpg"
+            src="./img1.png"
             alt=""
             className="h-full w-full object-cover object-center"
           />
