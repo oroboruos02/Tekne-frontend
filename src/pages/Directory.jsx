@@ -90,10 +90,10 @@ function Directory() {
     },
   ];
 
-  const renderTable = (/* id , */title, data) => {
+  const renderTable = (title, data) => {
     if (title === 'Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs') {
       return (
-        <div /* id={id} */ className="mt-8">
+        <div className="mt-8">
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
@@ -185,7 +185,7 @@ function Directory() {
         {/* Menú de navegación */}
         <nav className="mb-8">
           <ul className="flex flex-wrap justify-center space-x-4">
-            <li><a href="#companies" className="text-blue-500 hover:underline">Empresas</a></li>
+            <li><a href="#companies" className="text-blue-500 hover:underline">Subestaciones electricas</a></li>
             <li><a href="#equipmentRental" className="text-blue-500 hover:underline">Alquiler de Equipos</a></li>
             <li><a href="#technicalSupplies" className="text-blue-500 hover:underline">Suministros Técnicos</a></li>
             <li><a href="#protections" className="text-blue-500 hover:underline">Protecciones</a></li>
@@ -194,12 +194,26 @@ function Directory() {
           </ul>
         </nav>
 
-        {renderTable('Empresas que ofrecen proyectos para automatización Subestaciones Eléctricas', companies)}
-        {renderTable('Alquiler de equipos: Omicron CMC 356', equipmentRental)}
-        {renderTable('Empresas de suministro de personal técnico para el desarrollo de proyectos en subestaciones eléctricas', technicalSupplies)}
-        {renderTable('Empresas que ofrecen servicios de pruebas de Inyección en protecciones electricas', protections)}
-        {renderTable('Empresas que ensamblan tableros de control y protección para subestaciones electricas', panels)}
-        {renderTable('Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs', relays)}
+        {/* Renderizado de las tablas */}
+        {/* Cada tabla debe tener un ID correspondiente */}
+        <div id="companies">
+          {renderTable('Empresas que ofrecen proyectos para automatización Subestaciones Eléctricas', companies)}
+        </div>
+        <div id="equipmentRental">
+          {renderTable('Alquiler de equipos: Omicron CMC 356', equipmentRental)}
+        </div>
+        <div id="technicalSupplies">
+          {renderTable('Empresas de suministro de personal técnico para el desarrollo de proyectos en subestaciones eléctricas', technicalSupplies)}
+        </div>
+        <div id="protections">
+          {renderTable('Empresas que ofrecen servicios de pruebas de Inyección en protecciones eléctricas', protections)}
+        </div>
+        <div id="panels">
+          {renderTable('Empresas que ensamblan tableros de control y protección para subestaciones eléctricas', panels)}
+        </div>
+        <div id="relays">
+          {renderTable('Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs', relays)}
+        </div>
       </main>
 
         {/* Nueva sección para la nota */}

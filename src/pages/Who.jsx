@@ -108,7 +108,7 @@ function Who() {
                   <img className="w-full h-full object-cover" src="https://www.ga-p.com/wp-content/uploads/2018/03/Juan-P%C3%A9rez-G%C3%B3mez-e1606511654387.jpg" alt="Profile of a man" />
                 </div>
                 <div className="text-lg font-semibold text-gray-900">Juan Pérez</div>
-                <div className="text-gray-600">"Estamos enormemente satisfechos con los servicios de ingeniería en automática industrial que hemos recibido. El equipo demostró un profundo conocimiento técnico y una habilidad excepcional para adaptarse a nuestras necesidades específicas. Su capacidad para identificar y resolver problemas complejos en tiempo récord fue impresionante. Gracias a su colaboración, hemos logrado implementar sistemas automatizados que han optimizado nuestros procesos de producción y reducido significativamente los tiempos de inactividad. La calidad de su trabajo y su compromiso con la excelencia son evidentes en cada proyecto que han realizado para nosotros. ¡Sin duda, los consideramos un socio invaluable en nuestro éxito!"</div>
+                <div className="text-gray-600">"Testimonio de Juan Perez: "Estamos enormemente satisfechos con los servicios de ingeniería y montajes eléctricos de TEKNE SOLUCIONES. El equipo demostró un profundo conocimiento técnico y una habilidad excepcional para adaptarse a nuestras necesidades específicas. Su capacidad para identificar y resolver problemas complejos en tiempo récord fue impresionante. Gracias a su colaboración, hemos logrado la energización de la subestación en tiempo récord. Su compromiso con la excelencia los convierte en un socio invaluable en nuestro éxito."</div>
               </div>
             </div>
           </div>
