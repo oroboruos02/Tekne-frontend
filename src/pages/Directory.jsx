@@ -5,7 +5,7 @@ function Directory() {
   const companies = [
     { name: 'Axon Group Ltda', web: 'https://axongroup.com.co/', contact: 'sede principal Colombia,<br/>Support@Axongoup.com.co<br/>linea telefonica: +57 1 755 99 00', country: 'Colombia' },
     { name: 'HMV Ingenerios', web: 'https://www.h-mv.com/', contact: 'HVM Ingenieros Ltda.<br/>Bogota Calle 70 # 7-30 Pisos 3,4,5 y 7 Edificio Septima Setenta<br/>Tel:(57)601 643 9500, Fax:(57)601 211 4577', country: 'Colombia' },
-    { name: 'Siemens SAS', web: 'https://www.siemens.com/co', contact: 'Colombia / 250201 Tenjo / Autopista Medellin KM 8.5<br/>+57 604 3253066<br/>+57 320 4844719<br/>melisa.abad@siemens.com', country: 'Alemania' },
+    { name: 'Siemens SAS', web: 'https://www.siemens.com/global/en.html', contact: 'Colombia / 250201 Tenjo / Autopista Medellin KM 8.5<br/>+57 604 3253066<br/>+57 320 4844719<br/>melisa.abad@siemens.com', country: 'Alemania' },
     { name: 'Potencia y tecnologias incorporadas S.A', web: 'https://www.pti-sa.com.co/es/', contact: 'Cali (Principal)<br/>Av. Guadalupe # 2-50<br/>Tel: +57 2 336-6461', country: 'Colombia' },
     { name: 'SEL Colombia', web: 'https://selinc.com/', contact: 'Bogota, Colombia<br/>Tel: (+57) 1 823 7561', country: 'USA' },
     { name: 'Hitachi Energy Colombia', web: 'https://www.hitachienergy.com/latam/es', contact: 'Hitachi Energy Colombia<br/>Avenida Carrera 45 Nro 108-27.Torre 1. Piso 13 Bogota Cundinamarca', country: 'Suiza' },
@@ -39,9 +39,9 @@ function Directory() {
 
   const panels = [
     // Datos de ejemplo para la tabla "Tableros"
-    { name: 'Dimelectrico', web: 'Dimelectrico – Dimelectrico', contact: 'Calle 17 No. 12 -92 Piso 4 Edificio Avella<br/>ventasvirtuales@dimelectrico.com<br/>3153965039', country: 'Colombia' },
+    { name: 'Dimelectrico', web: 'https://dimelectrico.com/', contact: 'Calle 17 No. 12 -92 Piso 4 Edificio Avella<br/>ventasvirtuales@dimelectrico.com<br/>3153965039', country: 'Colombia' },
     { name: 'REDES & MONTAJES LTDA', web: 'https://www.redesymontajes.com/', contact: 'Dirección: Carrera 9a # 65 - 72 Chapinero<br/>Teléfono: 4 72 71 06, http://www.redesymontajes.com', country: 'Colombia' },
-    { name: 'ECTRICOL SAS', web: 'Ectricol | Inicio', contact: 'PBX 601 7431415<br/>Ventas: +57 316 5690783<br/>contactenos@ectricol.com<br/>Km 7.1 Aut. Medellín Parque Industrial Celta Bodega 119', country: 'Colombia' },
+    { name: 'ECTRICOL SAS', web: 'https://www.ectricol.com/', contact: 'PBX 601 7431415<br/>Ventas: +57 316 5690783<br/>contactenos@ectricol.com<br/>Km 7.1 Aut. Medellín Parque Industrial Celta Bodega 119', country: 'Colombia' },
     { name: 'Soluciones MDS SAS', web: 'https://proelectricos.com/', contact: ' Calle 12A N° 21-21 de la ciudad de Bogotá D.C., Colombia<br/>Correo electrónico calidad@proelectricos.com<br/>Teléfono +57 (1) 2471255', country: 'Colombia' },
   ];
 

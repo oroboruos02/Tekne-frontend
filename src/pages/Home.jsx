@@ -47,30 +47,30 @@ export default function Example() {
     {
       name: 'Suministro de Personal Técnico',
       href: supplyRef,
-      imageSrc: 'https://www.glingenieros.com.co/wp-content/uploads/2020/09/subestacion-elec31.jpg',
+      imageSrc: './img20.png',
       description: 'Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos.',
     },
     {
       name: 'Comunicaciones',
       href: communicationsRef,
-      imageSrc: 'https://www.coinsi.com/wp-content/uploads/2021/09/COINSI-SUBESTACIONES-scaled.jpg',
+      imageSrc: './img21.png',
       description: 'Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6).',
     },
     {
       name: 'Montaje Electromecánico',
       href: mountingRef,
-      imageSrc: 'https://d100mj7v0l85u5.cloudfront.net/s3fs-public/tableros-y-subestaciones-electricas-de-GL-Ingenieros-122147-g.jpg',
+      imageSrc: './img22.png',
       description: 'Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables.',
     },
     {
       name: 'Cableado y Conexionado',
       href: cablingRef,
-      imageSrc: 'https://rentadeplantas.com.mx/wp-content/uploads/2021/08/fallas-comunes-subestaciones-electricas.jpg',
+      imageSrc: './img23.png',
       description: 'Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos.',
     },
     { name: 'Mantenimiento',
       href: maintenanceRef,
-      imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1TzOXv_Ved3pAkBPiKzE5J2saU-Umw-xhA&usqp=CAU',
+      imageSrc: './img24.png',
       description: 'Ofrecemos servicios de mantenimiento y pruebas eléctricas en equipos de corte y protección en baja, media y alta tensión',
      },
   ]
@@ -79,21 +79,21 @@ export default function Example() {
     {
       name: 'Control Industrial',
       href: controlRef,
-      imageSrc: './img6.png',
+      imageSrc: './img30.png',
       imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
       description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
     },
     {
       name: 'Instrumentación',
       href: instrumentationRef,
-      imageSrc: './img4.png',
+      imageSrc: './img31.png',
       imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
       description: 'Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.',
     },
     {
       name: 'Áreas Clasificadas',
       href: areasRef,
-      imageSrc: './img5.png',
+      imageSrc: './img32.png',
       imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
       description: 'Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof.',
     },
@@ -203,7 +203,7 @@ export default function Example() {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src="./img1.png"
+                src="./img39.png"
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -265,7 +265,7 @@ export default function Example() {
   <div className="relative overflow-hidden rounded-lg">
     <div className="absolute inset-0">
       <img
-        src="https://www.fundacionendesa.org/content/dam/fundacion-endesa-com/actividadesyvisitas/hero-subestaciones-electricas.jpg"
+        src="./img36.png"
         alt=""
         className="h-full w-full object-cover object-center"
       />
@@ -397,7 +397,7 @@ export default function Example() {
       </div>
     </div>
     <div className="border-t border-gray-800 py-10 text-center">
-      <p className="text-sm text-gray-400">Copyright &copy; 2024 Tekne</p>
+      <p className="text-sm text-gray-400">Copyright &copy; 2024 Tekne Soluciones</p>
     </div>
   </div>
 </footer>
