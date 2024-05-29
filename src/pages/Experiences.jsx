@@ -4,19 +4,33 @@ import Banner from '../components/Banner';
 
 function Experiences() {
 
-  // Función para abrir el archivo PDF
-  const openPDF = () => {
-    // Reemplaza 'ruta_al_archivo.pdf' con la ruta de tu archivo PDF
-    window.open('./Certificado.pdf', '_blank');
-  };
-
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <Banner/>
       {/* Main Content */}
       <main className="mt-20 px-4 lg:px-0 lg:mt-24"> {/* Ajuste de margen superior */}
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-6xl font-semibold mb-10 mt-8">Experiencias</h1>
+          <h1 className="text-6xl font-semibold mb-10 mt-0">Experiencias</h1>
+
+    {/* Experiencias del cliente Axon Group LTDA */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Cliente: Axon Group LTDA</h2>
+        <ul className="list-disc pl-6">
+          <li className="mb-4">Ensamble en fábrica de (13) tableros de control y protección para el proyecto parque solar de los llanos. Subestación Trina solar 115Kv. propiedad de la empresa Trina Solar Energy, en el periodo comprendido de marzo a mayo del año 2020.</li>
+          <li className="mb-4">Ensamble en fábrica de (3) tableros de control para el SAS. (Sistema de automatización). Para el proyecto Subestacion El huche 115Kv. propiedad de la empresa de energía de Boyacá (EBSA). Además de la puesta en servicio en sitio del sistema (SAS), en el periodo comprendido de octubre a diciembre del año 2018.</li>
+          <li className="mb-4">Ensamble en fábrica de (3) tableros de control para el SAS. (Sistema de automatización). Para el proyecto Subestación Ricaurte 115Kv. propiedad de la empresa de energía de Boyacá (EBSA). Además de la puesta en servicio en sitio del sistema (SAS), en el periodo comprendido de octubre a diciembre del año 2018.</li>
+          <li className="mb-4">Ensamble en fábrica de (3) tableros de control para el SAS. (Sistema de automatización). Para el proyecto Subestación Suamox 115/230 Kv. propiedad de la empresa de energía de Boyacá (EBSA). Además de la puesta en servicio en sitio del sistema (SAS), en el periodo comprendido de junio - agosto del año 2019.</li>
+          <li className="mb-4">Ensamble en fábrica de (2) tableros de control para el SAS. (Sistema de automatización). Para el proyecto Subestación Hunza 34.5 Kv. propiedad de la empresa de energía de Boyacá (EBSA). Además de la puesta en servicio en sitio del sistema (SAS), en el periodo comprendido de junio - agosto del año 2019.</li>
+          <li className="mb-4">Cambio de tableros de protección de (4) bahías de 115 Kv. Para el proyecto. Modernización de la subestación Donato 115 Kv. propiedad de la empresa de energía de Boyacá (EBSA). En el periodo comprendido de septiembre - noviembre del año 2020.</li>
+          <li className="mb-4">Diseño, ensamble y reemplazo de tableros de protección de (3) bahías de 34.5 Kv. Para el proyecto. Modernización de la subestación Hunza 34.5 Kv. propiedad de la empresa de energía de Boyacá (EBSA), en el periodo comprendido de mayo - julio del año 2018.</li>
+          <li className="mb-4">Ensamble de tablero de control y protección de (1) bahías de 115 Kv. Para el proyecto. Ampliación de la subastación Peldar 115 Kv. propiedad de la empresa Peldar. (Zipaquirá), en el periodo julio del año 2019.</li>
+          <li className="mb-4">Ensamble de tablero de control y protección de (1) bahías Trafo 115 Kv. Para el proyecto. Ampliación de la subastación Termo Yopal 115 Kv. propiedad de la empresa Termo Yopal, en el periodo junio del año 2019.</li>
+          <li className="mb-4">Ensamble de tablero de control y protección de (1) bahías Trafo 34.5 Kv. Para el proyecto. Modernización de la subastación EL Líbano 115 Kv. propiedad de la empresa Celsia. (Tolima) Además de la puesta en servicio del SAS (Sistema de automatización) de la Subestación, en el periodo junio del año 2019.</li>
+          <li className="mb-4">Cambio de Relés de protección de (7) bahías de 34.5 Kv. Para el proyecto. Modernización de la subestación Donato 115 Kv. propiedad de la empresa de energía de Boyacá. (EBSA). En el periodo. Noviembre - diciembre del año 2019.</li>
+          <li className="mb-4">Ensamble de tableros de control y protección para (5) bahías de 115 Kv. Para el proyecto. Subestación Zarzal 115 Kv. propiedad de la empresa Celsia. (Valle del cauca), en el periodo. Agosto - noviembre del año 2020.</li>
+        </ul>
+      </section>
+
           {/* Experiencias del cliente ATA Electric */}
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Cliente: ATA Electric</h2>
@@ -29,16 +43,6 @@ function Experiences() {
               <li className="mb-4">Ensamble de gabinetes de control y pruebas secundarias a seccionalizadores 34.5 Kv. Proyecto sincronismo de generación, campo Rubiales (ECOPETROL- ABB)</li>
             </ul>
           </section>
-
-          {/* Botón para ver certificaciones laborales */}
-          <div className="text-center mb-8">
-            <button 
-              className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
-              onClick={openPDF}
-            >
-              Ver Certificaciones Laborales
-            </button>
-          </div>
           
           {/* Experiencias del cliente EBSA */}
           <section className="mb-12">

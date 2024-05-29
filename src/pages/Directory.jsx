@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Directory() {
   const companies = [
-    { name: 'Axon Group Ltda', web: 'www.axongroup.com.co', contact: 'sede principal Colombia,<br/>Support@Axongoup.com.co<br/>linea telefonica: +57 1 755 99 00', country: 'Colombia' },
+    { name: 'Axon Group Ltda', web: 'https://axongroup.com.co/', contact: 'sede principal Colombia,<br/>Support@Axongoup.com.co<br/>linea telefonica: +57 1 755 99 00', country: 'Colombia' },
     { name: 'HMV Ingenerios', web: 'https://www.h-mv.com/', contact: 'HVM Ingenieros Ltda.<br/>Bogota Calle 70 # 7-30 Pisos 3,4,5 y 7 Edificio Septima Setenta<br/>Tel:(57)601 643 9500, Fax:(57)601 211 4577', country: 'Colombia' },
     { name: 'Siemens SAS', web: 'https://www.siemens.com/co', contact: 'Colombia / 250201 Tenjo / Autopista Medellin KM 8.5<br/>+57 604 3253066<br/>+57 320 4844719<br/>melisa.abad@siemens.com', country: 'Alemania' },
     { name: 'Potencia y tecnologias incorporadas S.A', web: 'https://www.pti-sa.com.co/es/', contact: 'Cali (Principal)<br/>Av. Guadalupe # 2-50<br/>Tel: +57 2 336-6461', country: 'Colombia' },
