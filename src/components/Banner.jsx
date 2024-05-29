@@ -14,7 +14,7 @@ const Banner = () => {
         </div>
         <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
-          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">¡Bienvenidos a Teckne! Excelencia en ingeniería, montajes eléctricos y automatización. Innovamos para su éxito.
+          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">¡Bienvenidos a Tekne! Excelencia en ingeniería, montajes eléctricos y automatización. Innovamos para su éxito.
 </h1>
           <p className="mt-4 text-xl text-white">
           Hacemos de tu proyecto nuestro compromiso.
