@@ -25,7 +25,7 @@ function Directory() {
 
   const technicalSupplies = [
     // Datos de ejemplo para la tabla "Suministros técnicos"
-    { name: 'Tekne Soluciones', web: 'www.tekne-soluciones.com', contact: 'contacto@supply1.com', country: 'Colombia' },
+    { name: 'Tekne Soluciones', web: 'www.teknesoluciones.com', contact: 'teknesoluciones2@gmail.com', country: 'Colombia' },
   ];
 
   const protections = [
@@ -49,20 +49,20 @@ function Directory() {
     {
       name: 'Siemens',
       model: 'Siprotec',
-      representative: 'Axon Group Ltda<br/>Potencia y Tecnologías Incorporadas S.A.',
-      web: 'www.siemens1.com, www.siemens2.com',
-      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/>Cali<br/>Av. Guadalupe # 2-50<br/>Telefono +57 2 336-6461',
+      representative: 'Axon Group Ltda<br/>Potencia y Tecnologías Incorporadas',
+      web: 'www.siemens1.com<br/>www.siemens2.com',
+      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/><br/>Cali Colombia<br/>Av. Guadalupe # 2-50<br/>https://www.pti-sa.com.co/es/contacto<br/>Telefono +57 2 336-6461',
     },
     {
       name: 'Siemens',
       model: 'Ruggedcom',
       representative: 'Axon Group Ltda<br/>Kinnesis Solutions',
-      web: 'Contacto (selinc.com), www.siprotec2.com',
-      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/>Medellín - Colombia<br/>Cra 25 # 1 A Sur 155 - Edificio Platinum<br/>Superior Oficina 1453<br/>Celular +57 316 527 79 74',
+      web: 'Contacto (selinc.com)<br/>www.siprotec2.com',
+      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/><br/>Medellín - Colombia<br/>Cra 25 # 1 A Sur 155 - Edificio Platinum<br/>Superior Oficina 1453<br/>Celular +57 316 527 79 74',
     },
     {
       name: 'SEL',
-      model: 'Reles SEL, GPS,Gateway RTAC',
+      model: 'Reles SEL, GPS, Gateway RTAC',
       representative: 'SEL Colombia',
       web: 'Contacto (selinc.com)',
       contact: 'Bogotá, Colombia<br/>Teléfono: (+57) 1 823 7561',
@@ -71,8 +71,8 @@ function Directory() {
       name: 'GE',
       model: 'Reles, GPS',
       representative: 'Automatizacion Avanzada<br/>Microdyne SAS',
-      web: 'https://automatizacionavanzada.com/, https://microdynesas.com/',
-      contact: 'Bogotá D.C., Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1<br/>productos@automatizacionavanzada.com<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495<br/>Medellín, Colombia<br/>Cra 75DA N. 2B sur 320 Int 829<br/>(4) 6046067994 Cel: +573234477927',
+      web: 'https://automatizacionavanzada.com/<br/>https://microdynesas.com/',
+      contact: 'Bogotá D.C., Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495<br/><br/>Medellín, Colombia<br/>Cra 75DA N. 2B sur 320 Int 829<br/>https://microdynesas.com/contactenos<br/>(4) 6046067994 Cel: +573234477927',
     },
     {
       name: 'ABB',
@@ -90,30 +90,51 @@ function Directory() {
     },
   ];
 
-  const renderTable = (title, data) => {
-    if (title === 'Reles') {
+  const renderTable = (/* id , */title, data) => {
+    if (title === 'Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs') {
       return (
-        <div className="mt-8">
+        <div /* id={id} */ className="mt-8">
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
               <thead className="bg-gray-800 text-white">
                 <tr>
-                  <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Marca</th>
-                  <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Modelo</th>
-                  <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Representante</th>
-                  <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Web</th>
-                  <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Contacto</th>
+                  <th className="py-3 px-4">Nombre</th>
+                  <th className="py-3 px-4">Modelo</th>
+                  <th className="py-3 px-4">Representante</th>
+                  <th className="py-3 px-4">Web</th>
+                  <th className="py-3 px-4">Contacto</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
                 {data.map((relay, index) => (
                   <tr key={index} className="bg-gray-100 hover:bg-gray-200">
-                    <td className="py-3 px-4">{relay.name}</td>
-                    <td className="py-3 px-4">{relay.model}</td>
-                    <td className="py-3 px-4" dangerouslySetInnerHTML={{ __html: relay.representative }} />
-                    <td className="py-3 px-4" dangerouslySetInnerHTML={{ __html: relay.web.split(', ').map(url => `<a href="http://${url}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">${url}</a><br/>`).join('') }} />
-                    <td className="py-3 px-4" dangerouslySetInnerHTML={{ __html: relay.contact }} />
+                    <td className="py-3 px-4 border border-gray-200">{relay.name}</td>
+                    <td className="py-3 px-4 border border-gray-200">{relay.model}</td>
+                    <td className="py-3 px-4 border border-gray-200">
+                      {relay.representative.split('<br/>').map((company, idx) => (
+                        <div key={idx}>
+                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
+                          {company}
+                        </div>
+                      ))}
+                    </td>
+                    <td className="py-3 px-4 border border-gray-200">
+                      {relay.web.split('<br/>').map((url, idx) => (
+                        <div key={idx}>
+                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
+                          <a href={`http://${url}`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">{url}</a>
+                        </div>
+                      ))}
+                    </td>
+                    <td className="py-3 px-4 border border-gray-200">
+                      {relay.contact.split('<br/>').map((contact, idx) => (
+                        <div key={idx}>
+                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
+                          {contact}
+                        </div>
+                      ))}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -126,7 +147,7 @@ function Directory() {
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
               <thead className="bg-gray-800 text-white">
                 <tr>
                   <th className="py-3 px-4 uppercase font-semibold text-sm text-left">Empresa</th>
@@ -158,20 +179,40 @@ function Directory() {
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
-      <main className="flex-grow mt-24 p-6">
+      <main className="flex-grow mt-6 p-6">
         <h1 className="text-4xl font-bold text-center mb-6">Directorio de Automatización Subestaciones Eléctricas</h1>
-        {renderTable('Automatización Subestaciones Electricas', companies)}
+        
+        {/* Menú de navegación */}
+        <nav className="mb-8">
+          <ul className="flex flex-wrap justify-center space-x-4">
+            <li><a href="#companies" className="text-blue-500 hover:underline">Empresas</a></li>
+            <li><a href="#equipmentRental" className="text-blue-500 hover:underline">Alquiler de Equipos</a></li>
+            <li><a href="#technicalSupplies" className="text-blue-500 hover:underline">Suministros Técnicos</a></li>
+            <li><a href="#protections" className="text-blue-500 hover:underline">Protecciones</a></li>
+            <li><a href="#panels" className="text-blue-500 hover:underline">Tableros</a></li>
+            <li><a href="#relays" className="text-blue-500 hover:underline">Relés</a></li>
+          </ul>
+        </nav>
+
+        {renderTable('Empresas que ofrecen proyectos para automatización Subestaciones Eléctricas', companies)}
         {renderTable('Alquiler de equipos: Omicron CMC 356', equipmentRental)}
-        {renderTable('Suministros técnicos', technicalSupplies)}
-        {renderTable('Protecciones', protections)}
-        {renderTable('Tableros', panels)}
-        {renderTable('Reles', relays)}
+        {renderTable('Empresas de suministro de personal técnico para el desarrollo de proyectos en subestaciones eléctricas', technicalSupplies)}
+        {renderTable('Empresas que ofrecen servicios de pruebas de Inyección en protecciones electricas', protections)}
+        {renderTable('Empresas que ensamblan tableros de control y protección para subestaciones electricas', panels)}
+        {renderTable('Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs', relays)}
       </main>
 
-      {/* Botón de regreso */}
-      <div className="fixed bottom-6 right-6">
+        {/* Nueva sección para la nota */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-8 mb-10">
+          <div className="text-center text-gray-500">
+            Los datos son tomados desde las páginas web de cada proveedor. Si desea que su empresa sea eliminada de nuestra lista o desea ser agregado como proveedor, por favor contáctenos.
+          </div>
+        </div>
+
+      {/* Boton de regreso */}
+      <div className="fixed bottom-14 right-6">
         <Link to="/">
-          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700">
+          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
             Regresar
           </button>
         </Link>
@@ -218,6 +259,13 @@ function Directory() {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp bottom */}
+      <div className="fixed bottom-12 right-36 z-10">
+        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
+        </a>
+      </div>
     </div>
   );
 }

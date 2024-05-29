@@ -58,12 +58,14 @@ function Experiences() {
         </div>
       </main>
 
-      {/* Botón de regreso */}
-      <div className="fixed bottom-6 right-6">
-          <Link to="/">
-            <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700">Regresar</button>
-          </Link>
-        </div>
+      {/* Boton de regreso */}
+      <div className="fixed bottom-14 right-6">
+        <Link to="/">
+          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
+            Regresar
+          </button>
+        </Link>
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-800 py-12">
@@ -107,6 +109,12 @@ function Experiences() {
         </div>
       </footer>
       
+      {/* WhatsApp bottom */}
+      <div className="fixed bottom-12 right-36 z-10">
+        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
+        </a>
+      </div>
     </div>
   );
 }

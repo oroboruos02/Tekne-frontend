@@ -34,7 +34,7 @@ function Who() {
                 <div className="mt-14 lg:mt-0 lg:ml-16">
                   <div className="bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] bg-opacity-30 rounded-xl p-10">
                     <h2 className="text-lg font-semibold text-white">Tu Socio en Ingeniería de Subestaciones Eléctricas</h2>
-                    <p className="mt-4 text-base text-white">En Tekne, nos especializamos en proporcionar soluciones de ingeniería de vanguardia para subestaciones eléctricas. Con una sólida experiencia, un compromiso inquebrantable con la calidad y un enfoque centrado en el cliente.</p>
+                    <p className="mt-4 text-base text-white">En TEKNE SOLUCIONES nos especializamos en montajes eléctricos, mantenimiento de celdas, cableado y conexionado de redes de comunicaciones, y ensamble de tableros de automatización y control. Además, proporcionamos personal técnico altamente capacitado para trabajos en fábrica y SAT. Innovamos para su éxito.</p>
                   </div>
                 </div>
               </div>
@@ -115,13 +115,14 @@ function Who() {
         </section>
       </main>
 
-      {/* Botón de regreso */}
-        <div className="fixed bottom-6 right-6">
-          <Link to="/"> {/* Enlaza de nuevo al inicio */}
-            <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700">Regresar</button>
-          </Link>
-        </div>
-
+      {/* Boton de regreso */}
+      <div className="fixed bottom-14 right-6">
+        <Link to="/">
+          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
+            Regresar
+          </button>
+        </Link>
+      </div>
       {/* Footer */}
       <footer className="bg-gray-800 py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -163,6 +164,13 @@ function Who() {
           </div>
         </div>
       </footer>
+      
+      {/* WhatsApp bottom */}
+      <div className="fixed bottom-12 right-36 z-10">
+        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
+        </a>
+      </div>
     </div>
   );
 }

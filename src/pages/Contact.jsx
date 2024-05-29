@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 export default function Example() {
@@ -71,9 +72,9 @@ export default function Example() {
                   <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  545 Mavis Island
+                Calle 56 sur 90b25
                   <br />
-                  Bogota, IL 99191
+                  Bogotá-Colombia
                 </dd>
               </div>
               <div className="flex gap-x-4">
@@ -173,6 +174,15 @@ export default function Example() {
             </div>
           </div>
         </form>
+      </div>
+
+
+
+      {/* WhatsApp bottom */}
+      <div className="fixed bottom-12 right-6 z-10">
+        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
+        </a>
       </div>
     </div>
   );

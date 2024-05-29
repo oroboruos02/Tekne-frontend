@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
+import { RefContext } from '../context/RefContext';
 
 function Services() {
+
+  const { assemblyRef, supplyRef, communicationsRef, mountingRef, cablingRef, maintenanceRef, controlRef, instrumentationRef, areasRef, saleRef  } = useContext(RefContext);
+
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <Banner/>
@@ -21,7 +25,7 @@ function Services() {
  {/* Services */}
   <section className="py-24 bg-white">
     <div className="max-w-7xl mx-auto px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16" ref={assemblyRef}>
         {/* Service 1 */}
           <div>
             <h3 id="tableros-electricos" className="text-2xl font-semibold text-gray-900">Ensamble y Diseño de Tableros de Control y Distribución</h3>
@@ -30,7 +34,7 @@ function Services() {
       </div>
 
       {/* Service 2 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-12" ref={supplyRef}>
           <div>
             <h3 id="servicios-de-diseño" className="text-2xl font-semibold text-gray-900">Suministro de Personal Técnico</h3>
               <p className="mt-4 text-lg text-gray-600">Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos, asegurando la excelencia en la ejecución de cada proyecto.</p>
@@ -41,7 +45,7 @@ function Services() {
   </div>
 
       {/* Service 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={controlRef}>
               <div>
                 <h3 id="retrofit" className="text-2xl font-semibold text-gray-900">Control Industrial</h3>
                 <p className="mt-4 text-lg text-gray-600">Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales, cumpliendo con las normas y estándares nacionales e internacionales, así como con los requerimientos específicos de cada cliente.</p>
@@ -52,7 +56,7 @@ function Services() {
             </div>
 
             {/* Service 4 */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={communicationsRef}>
               <div>
                 <h3 id="pruebas" className="text-2xl font-semibold text-gray-900">Comunicaciones</h3>
                 <p className="mt-4 text-lg text-gray-600">Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6), garantizando una comunicación eficiente y segura en entornos industriales.</p>
@@ -64,7 +68,7 @@ function Services() {
 
             
       {/* Service 5 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={mountingRef}>
               <div>
                 <h3 id="retrofit" className="text-2xl font-semibold text-gray-900">Montaje Electromecánico</h3>
                 <p className="mt-4 text-lg text-gray-600">Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables de acuerdo a los requerimientos de las instalaciones industriales, asegurando un montaje electromecánico eficiente y seguro.</p>
@@ -75,7 +79,7 @@ function Services() {
             </div>
 
       {/* Service 6 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={cablingRef}>
           <div>
             <h3 id="retrofit" className="text-2xl font-semibold text-gray-900">Cableado y Conexionado</h3>
             <p className="mt-4 text-lg text-gray-600">Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos, cumpliendo con los requerimientos específicos de cada cliente.</p>
@@ -86,7 +90,7 @@ function Services() {
         </div>
 
       {/* Service 7 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={instrumentationRef}>
           <div>
             <h3 id="retrofit" className="text-2xl font-semibold text-gray-900">Instrumentación</h3>
               <p className="mt-4 text-lg text-gray-600">Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.</p>
@@ -97,7 +101,7 @@ function Services() {
             </div>
 
       {/* Service 8 */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={areasRef}>
           <div>
             <h3 id="retrofit" className="text-2xl font-semibold text-gray-900">Áreas Clasificadas</h3>
               <p className="mt-4 text-lg text-gray-600">Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof. Además, proporcionamos accesorios y cajas certificadas bajo las normas NEMA 4X y NEMA 7 clase 1 div 1 y 2.</p>
@@ -121,7 +125,7 @@ function Services() {
       {/* Service 10 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           <div>
-            <h3 id="pruebas" className="text-2xl font-semibold text-gray-900">Mantenimiento</h3>
+            <h3 id="pruebas" className="text-2xl font-semibold text-gray-900" ref={maintenanceRef}>Mantenimiento</h3>
               <p className="mt-4 text-lg text-gray-600">Ofrecemos servicios de mantenimiento y pruebas eléctricas en equipos de corte y protección en baja, media y alta tensión, garantizando el correcto funcionamiento y seguridad de las instalaciones. Entre nuestros servicios se incluyen:</p>
                 <ul className="list-disc list-inside mt-4 text-lg text-gray-600">
                   <li>Resistencia de contactos.</li>
@@ -140,7 +144,7 @@ function Services() {
             </div>
 
                                   {/* Service 11 */}
-                                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+                                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16" ref={saleRef}>
               <div>
                 <h3 id="pruebas" className="text-2xl font-semibold text-gray-900">Venta y Suministro de Materiales</h3>
                 <p className="mt-4 text-lg text-gray-600">Proveemos y suministramos materiales de control y fungibles para tableristas, incluyendo:</p>
@@ -177,10 +181,12 @@ function Services() {
         </section>
       </main>
 
-      {/* Return Button */}
-      <div className="fixed bottom-6 right-6">
+      {/* Boton de regreso */}
+      <div className="fixed bottom-14 right-6">
         <Link to="/">
-          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700">Regresar</button>
+          <button className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none">
+            Regresar
+          </button>
         </Link>
       </div>
 
@@ -226,7 +232,13 @@ function Services() {
           </div>
         </div>
       </footer>
-      
+
+      {/* WhatsApp bottom */}
+      <div className="fixed bottom-12 right-36 z-10">
+        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
+        </a>
+      </div>
     </div>
   );
 }
