@@ -5,6 +5,7 @@ import Menu from '../components/Menu';
 import Banner from '../components/Banner';
 import useScrollToRef from '../Hooks/useScrollToRef'
 import { RefContext } from '../context/RefContext';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const navigation = {
   categories: [
@@ -126,7 +127,7 @@ export default function Example() {
                   <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Iniciar Sesion
                   </Link>
-                  <Link to="/register" className="text-sm font-medium text-white hover:text-gray-100">
+                  <Link to="/registerclient" className="text-sm font-medium text-white hover:text-gray-100">
                     Crear una Cuenta
                   </Link>
                 </div>
@@ -401,13 +402,16 @@ export default function Example() {
     </div>
   </div>
 </footer>
+
+<ScrollToTopButton />
       
       {/* WhatsApp bottom */}
-      <div className="fixed bottom-10 right-10 z-10">
+      <div className="fixed bottom-3 right-28 z-10">
           <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
           </a>
       </div>
     </div>
+    
   )
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Menu from '../components/Menu';
 import Banner from '../components/Banner';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 function Who() {
   return (
@@ -164,6 +165,8 @@ function Who() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTopButton />
       
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-36 z-10">

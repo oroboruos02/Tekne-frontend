@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
 import { RefContext } from '../context/RefContext';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 function Services() {
 
@@ -233,6 +234,8 @@ function Services() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTopButton />
 
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-36 z-10">

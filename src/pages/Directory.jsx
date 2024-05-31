@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 function Directory() {
   const companies = [
@@ -49,91 +50,103 @@ function Directory() {
     {
       name: 'Siemens',
       model: 'Siprotec',
-      representative: 'Axon Group Ltda<br/>Potencia y Tecnologías Incorporadas',
-      web: 'www.siemens1.com<br/>www.siemens2.com',
-      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/><br/>Cali Colombia<br/>Av. Guadalupe # 2-50<br/>https://www.pti-sa.com.co/es/contacto<br/>Telefono +57 2 336-6461',
+      representative: 'Axon Group Ltda.<br/>PTI S.A',
+      web: 'www.axongroup.com.co<br/>www.pti-sa.com.co/es/',
+      contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/>Cali Colombia<br/>Av. Guadalupe # 2-50<br/>https://www.pti-sa.com.co/es/contacto<br/>Telefono +57 2 336-6461',
     },
     {
       name: 'Siemens',
       model: 'Ruggedcom',
       representative: 'Axon Group Ltda<br/>Kinnesis Solutions',
-      web: 'Contacto (selinc.com)<br/>www.siprotec2.com',
+      web: 'www.axongroup.com.co<br/>www.kinnesis.com/',
       contact: 'Sede Principal Colombia<br/>Cra 16D 155A 06<br/>comercial@axongroup.com.co<br/>Telefono +57 1 755 99 00<br/><br/>Medellín - Colombia<br/>Cra 25 # 1 A Sur 155 - Edificio Platinum<br/>Superior Oficina 1453<br/>Celular +57 316 527 79 74',
     },
     {
       name: 'SEL',
       model: 'Reles SEL, GPS, Gateway RTAC',
       representative: 'SEL Colombia',
-      web: 'Contacto (selinc.com)',
+      web: 'selinc.com/es/',
       contact: 'Bogotá, Colombia<br/>Teléfono: (+57) 1 823 7561',
     },
     {
       name: 'GE',
       model: 'Reles, GPS',
-      representative: 'Automatizacion Avanzada<br/>Microdyne SAS',
-      web: 'https://automatizacionavanzada.com/<br/>https://microdynesas.com/',
+      representative: 'Automatizacion Avanzada<br/>MicroDYNE - S.A.S.',
+      web: 'automatizacionavanzada.com/<br/>microdynesas.com/',
       contact: 'Bogotá D.C., Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495<br/><br/>Medellín, Colombia<br/>Cra 75DA N. 2B sur 320 Int 829<br/>https://microdynesas.com/contactenos<br/>(4) 6046067994 Cel: +573234477927',
     },
     {
       name: 'ABB',
       model: 'Reles',
       representative: 'ABB COLOMBIA LTDA',
-      web: 'https://new.abb.com/medium-voltage/digital-substations',
+      web: 'new.abb.com/medium-voltage/digital-substations',
       contact: 'Bogotá, Colombia<br/>Avenida Carrera 45 No. 108-27, Torre 1, Piso 12<br/>Centro Empresarial Paralelo 108 (Autopista Norte)<br/>Freddy Rondón +57 3132433512',
     },
     {
       name: 'EATON',
       model: 'GATEWAY SMP',
       representative: 'Automatizacion Avanzada',
-      web: 'https://automatizacionavanzada.com/',
+      web: 'automatizacionavanzada.com/',
       contact: 'Bogotá, Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1,<br/>productos@automatizacionavanzada.com<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495',
     },
   ];
-
+  
   const renderTable = (title, data) => {
     if (title === 'Empresas que distribuyen equipos para la Automatización, como Reles, GPS, Gateway de Comunicación, Switchs') {
       return (
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="overflow-x-auto">
-            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
               <thead className="bg-gray-800 text-white">
                 <tr>
-                  <th className="py-3 px-4">Nombre</th>
-                  <th className="py-3 px-4">Modelo</th>
-                  <th className="py-3 px-4">Representante</th>
-                  <th className="py-3 px-4">Web</th>
-                  <th className="py-3 px-4">Contacto</th>
+                  <th className="py-3 px-4 border border-gray-300">EMPRESA</th>
+                  <th className="py-3 px-4 border border-gray-300">MODELO</th>
+                  <th className="py-3 px-4 border border-gray-300">REPRESENTANTE</th>
+                  <th className="py-3 px-4 border border-gray-300">WEB</th>
+                  <th className="py-3 px-4 border border-gray-300">CONTACTO</th>
                 </tr>
               </thead>
               <tbody className="text-gray-700">
                 {data.map((relay, index) => (
                   <tr key={index} className="bg-gray-100 hover:bg-gray-200">
-                    <td className="py-3 px-4 border border-gray-200">{relay.name}</td>
-                    <td className="py-3 px-4 border border-gray-200">{relay.model}</td>
-                    <td className="py-3 px-4 border border-gray-200">
-                      {relay.representative.split('<br/>').map((company, idx) => (
-                        <div key={idx}>
-                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
-                          {company}
-                        </div>
-                      ))}
+                    <td className="py-3 px-4 border border-gray-300">{relay.name}</td>
+                    <td className="py-3 px-4 border border-gray-300">{relay.model}</td>
+                    <td className="py-3 px-4 border border-gray-300 w-3/12">
+                      {relay.representative.split('<br/>').map((company, idx, arr) => {
+                        const isAxonOrAutomatizacion = company.includes('Axon Group Ltda') || (company.includes('Automatizacion Avanzada') && idx !== arr.length - 1);
+                        return (
+                          <div key={idx} className={isAxonOrAutomatizacion ? 'mb-1 border-b border-gray-300' : 'mb-1'}>
+                            {company}
+                          </div>
+                        );
+                      })}
                     </td>
-                    <td className="py-3 px-4 border border-gray-200">
-                      {relay.web.split('<br/>').map((url, idx) => (
-                        <div key={idx}>
-                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
-                          <a href={`http://${url}`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">{url}</a>
-                        </div>
-                      ))}
+                    <td className="py-3 px-4 border border-gray-300">
+                      {relay.web.split('<br/>').map((url, idx, arr) => {
+                        const isAxonOrAutomatizacion = url.includes('www.axongroup.com.co') || (url.includes('automatizacionavanzada.com/') && idx !== arr.length - 1);
+                        return (
+                          <div key={idx} className={isAxonOrAutomatizacion ? 'mb-1 border-b border-gray-300' : 'mb-1'}>
+                            <a href={`http://${url}`} className="text-blue-500 hover:underline block" target="_blank" rel="noopener noreferrer">{url}</a>
+                          </div>
+                        );
+                      })}
                     </td>
-                    <td className="py-3 px-4 border border-gray-200">
-                      {relay.contact.split('<br/>').map((contact, idx) => (
-                        <div key={idx}>
-                          {idx !== 0 && <hr className="my-2 border-t border-gray-400" />} {/* Línea horizontal */}
-                          {contact}
-                        </div>
-                      ))}
+                    <td className="py-3 px-4 border border-gray-300">
+                      {relay.contact.split('<br/>').map((contact, idx, arr) => {
+                        const isTelephone = contact.startsWith('Telefono') || contact.startsWith('PBX');
+                        const isLast = idx === arr.length - 1;
+                        return (
+                          <div
+                            key={idx}
+                            className={
+                              isTelephone || isLast ? 'mb-1 border-b border-gray-300' : 'mb-1'
+                            }
+                          >
+                            {contact}
+                          </div>
+                        );
+                      })}
                     </td>
                   </tr>
                 ))}
@@ -273,6 +286,8 @@ function Directory() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTopButton />
 
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-36 z-10">
