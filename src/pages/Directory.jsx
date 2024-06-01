@@ -85,7 +85,7 @@ function Directory() {
     {
       name: 'EATON',
       model: 'GATEWAY SMP',
-      representative: 'Automatizacion Avanzada',
+      representative: 'Automatizacion Avanzada.',
       web: 'automatizacionavanzada.com/',
       contact: 'Bogotá, Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1,<br/>productos@automatizacionavanzada.com<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495',
     },
@@ -111,26 +111,38 @@ function Directory() {
                 {data.map((relay, index) => (
                   <tr key={index} className="bg-gray-100 hover:bg-gray-200">
                     <td className="py-3 px-4 border border-gray-300">{relay.name}</td>
-                    <td className="py-3 px-4 border border-gray-300">{relay.model}</td>
+                    <td className="py-3 px-4 border border-gray-300">
+                      <div className="mb-1 h-20 flex items-center justify-center">
+                        {relay.model}
+                      </div>
+                    </td>
                     <td className="py-3 px-4 border border-gray-300 w-3/12">
                       {relay.representative.split('<br/>').map((company, idx, arr) => {
-                        const isAxonOrAutomatizacion = company.includes('Axon Group Ltda') || (company.includes('Automatizacion Avanzada') && idx !== arr.length - 1);
+                        const isAxon = company.includes('Axon Group Ltda');
+                        const isPTI = company.includes('PTI S.A');
+                        const isKinnesis = company.includes('Kinnesis Solutions');
+                        const isAutomatizacion = company.includes('Automatizacion Avanzada');
+                        const isMicroDYNE = company.includes('MicroDYNE - S.A.S.');
+                        const isSEL = company.includes('SEL Colombia');
+                        const isABB = company.includes('ABB COLOMBIA LTDA');
+                        const isAvanzada = company.includes('Automatizacion Avanzada');
                         return (
-                          <div key={idx} className={isAxonOrAutomatizacion ? 'mb-1 border-b border-gray-300' : 'mb-1'}>
-                            {company}
+                          <div key={idx} className={(isAxon || isAutomatizacion) ? 'mb-1 border-b h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                            <div key={idx} className={(isPTI || isKinnesis ||  isSEL  || isABB || isMicroDYNE || isABB || isAvanzada) ? 'mb-1 h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                              {company}
+                            </div>
                           </div>
                         );
                       })}
                     </td>
                     <td className="py-3 px-4 border border-gray-300">
-                      {relay.web.split('<br/>').map((url, idx, arr) => {
-                        const isAxonOrAutomatizacion = url.includes('www.axongroup.com.co') || (url.includes('automatizacionavanzada.com/') && idx !== arr.length - 1);
-                        return (
-                          <div key={idx} className={isAxonOrAutomatizacion ? 'mb-1 border-b border-gray-300' : 'mb-1'}>
-                            <a href={`http://${url}`} className="text-blue-500 hover:underline block" target="_blank" rel="noopener noreferrer">{url}</a>
+                      {relay.web.split('<br/>').map((url, idx, arr) => (
+                        <div key={idx} className={(url.includes('www.axongroup.com.co') || url.includes('automatizacionavanzada.com/')) ? 'mb-1 border-b h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                          <div key={idx} className={(url.includes('www.pti-sa.com.co/es/') || url.includes('www.kinnesis.com/') || url.includes('microdynesas.com/') || url.includes('selinc.com/es/') || url.includes('new.abb.com/medium-voltage/digital-substations')) ? 'mb-1 h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                          <a href={`http://${url}`} className="text-blue-500 hover:underline block" target="_blank" rel="noopener noreferrer">{url}</a>
                           </div>
-                        );
-                      })}
+                        </div>
+                      ))}
                     </td>
                     <td className="py-3 px-4 border border-gray-300">
                       {relay.contact.split('<br/>').map((contact, idx, arr) => {
