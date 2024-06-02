@@ -85,9 +85,9 @@ function Directory() {
     {
       name: 'EATON',
       model: 'GATEWAY SMP',
-      representative: 'Automatizacion Avanzada.',
+      representative: 'Automatizacion Avanzada',
       web: 'automatizacionavanzada.com/',
-      contact: 'Bogotá, Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1,<br/>productos@automatizacionavanzada.com<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: +57(601) 547 8510 CEL: 3178936495',
+      contact: 'Bogotá, Colombia<br/>Fontibón La Cofradía Cr. 97 - #24C - 23 BG: 1,<br/>productos@automatizacionavanzada.com<br/>servicioalcliente@automatizacionavanzada.com<br/>PBX: 57(601) 547 8510 CEL: 3178936495',
     },
   ];
   
@@ -108,60 +108,61 @@ function Directory() {
                 </tr>
               </thead>
               <tbody className="text-gray-700">
-                {data.map((relay, index) => (
-                  <tr key={index} className="bg-gray-100 hover:bg-gray-200">
-                    <td className="py-3 px-4 border border-gray-300">{relay.name}</td>
-                    <td className="py-3 px-4 border border-gray-300">
-                      <div className="mb-1 h-20 flex items-center justify-center">
-                        {relay.model}
-                      </div>
-                    </td>
-                    <td className="py-3 px-4 border border-gray-300 w-3/12">
-                      {relay.representative.split('<br/>').map((company, idx, arr) => {
-                        const isAxon = company.includes('Axon Group Ltda');
-                        const isPTI = company.includes('PTI S.A');
-                        const isKinnesis = company.includes('Kinnesis Solutions');
-                        const isAutomatizacion = company.includes('Automatizacion Avanzada');
-                        const isMicroDYNE = company.includes('MicroDYNE - S.A.S.');
-                        const isSEL = company.includes('SEL Colombia');
-                        const isABB = company.includes('ABB COLOMBIA LTDA');
-                        const isAvanzada = company.includes('Automatizacion Avanzada');
-                        return (
-                          <div key={idx} className={(isAxon || isAutomatizacion) ? 'mb-1 border-b h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
-                            <div key={idx} className={(isPTI || isKinnesis ||  isSEL  || isABB || isMicroDYNE || isABB || isAvanzada) ? 'mb-1 h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                {data.map((relay, index) => {
+                  const isLast = index === data.length - 1;
+                  return (
+                    <tr key={index} className="bg-gray-100 hover:bg-gray-200">
+                      <td className="py-3 px-4 border border-gray-300">{relay.name}</td>
+                      <td className="py-3 px-4 border border-gray-300">
+                        <div className="mb-1 h-20 flex items-center justify-center">
+                          {relay.model}
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 border border-gray-300 w-3/12">
+                        {relay.representative.split('<br/>').map((company, idx) => {
+                          const isAxon = company.includes('Axon Group Ltda');
+                          const isPTI = company.includes('PTI S.A');
+                          const isKinnesis = company.includes('Kinnesis Solutions');
+                          const isAutomatizacion = company.includes('Automatizacion Avanzada');
+                          const isMicroDYNE = company.includes('MicroDYNE - S.A.S.');
+                          const isSEL = company.includes('SEL Colombia');
+                          const isABB = company.includes('ABB COLOMBIA LTDA');
+                          const noBorderBottom = (isAutomatizacion && isLast) || isPTI || isKinnesis || isMicroDYNE || isSEL || isABB;
+                          return (
+                            <div key={idx} className={noBorderBottom ? 'mb-1 h-20 flex items-center justify-center' : 'mb-1 border-b h-20 flex items-center justify-center border-gray-300'}>
                               {company}
                             </div>
-                          </div>
-                        );
-                      })}
-                    </td>
-                    <td className="py-3 px-4 border border-gray-300">
-                      {relay.web.split('<br/>').map((url, idx, arr) => (
-                        <div key={idx} className={(url.includes('www.axongroup.com.co') || url.includes('automatizacionavanzada.com/')) ? 'mb-1 border-b h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
-                          <div key={idx} className={(url.includes('www.pti-sa.com.co/es/') || url.includes('www.kinnesis.com/') || url.includes('microdynesas.com/') || url.includes('selinc.com/es/') || url.includes('new.abb.com/medium-voltage/digital-substations')) ? 'mb-1 h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
-                          <a href={`http://${url}`} className="text-blue-500 hover:underline block" target="_blank" rel="noopener noreferrer">{url}</a>
-                          </div>
-                        </div>
-                      ))}
-                    </td>
-                    <td className="py-3 px-4 border border-gray-300">
-                      {relay.contact.split('<br/>').map((contact, idx, arr) => {
-                        const isTelephone = contact.startsWith('Telefono') || contact.startsWith('PBX');
-                        const isLast = idx === arr.length - 1;
-                        return (
-                          <div
-                            key={idx}
-                            className={
-                              isTelephone || isLast ? 'mb-1 border-b border-gray-300' : 'mb-1'
-                            }
-                          >
-                            {contact}
-                          </div>
-                        );
-                      })}
-                    </td>
-                  </tr>
-                ))}
+                          );
+                        })}
+                      </td>
+                      <td className="py-3 px-4 border border-gray-300">
+                        {relay.web.split('<br/>').map((url, idx) => {
+                          const isSpecialUrl = url.includes('www.axongroup.com.co') || url.includes('www.pti-sa.com.co/es/') || url.includes('www.kinnesis.com/') || url.includes('automatizacionavanzada.com/') || url.includes('microdynesas.com/') || url.includes('selinc.com/es/') || url.includes('new.abb.com/medium-voltage/digital-substations');
+                          const noBorderBottom = url.includes('www.pti-sa.com.co/es/') || url.includes('www.kinnesis.com/') || url.includes('microdynesas.com/') || url.includes('selinc.com/es/') || url.includes('new.abb.com/medium-voltage/digital-substations') || (url.includes('automatizacionavanzada.com/') && isLast);
+                          return (
+                            <div key={idx} className={noBorderBottom ? 'mb-1 h-20 flex items-center justify-center' : isSpecialUrl ? 'mb-1 border-b h-20 flex items-center justify-center border-gray-300' : 'mb-1'}>
+                              <a href={`http://${url}`} className="text-blue-500 hover:underline block" target="_blank" rel="noopener noreferrer">{url}</a>
+                            </div>
+                          );
+                        })}
+                      </td>
+                      <td className="py-3 px-4 border border-gray-300">
+                        {relay.contact.split('<br/>').map((contact, idx, arr) => {
+                          const noBorderBottom = !(contact.includes('Telefono +57 1 755 99 00') ||
+                            contact.includes('PBX: +57(601) 547 8510 CEL: 3178936495'));
+                          return (
+                            <div
+                              key={idx}
+                              className={noBorderBottom ? 'mb-1' : 'mb-1 border-b border-gray-300'}
+                            >
+                              {contact}
+                            </div>
+                          );
+                        })}
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
