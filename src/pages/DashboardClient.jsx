@@ -35,7 +35,7 @@ const DashboardClient = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 shadow-lg">
+      <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <Link to="/">
             <span className="sr-only">Your Company</span>
