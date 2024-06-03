@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 
 function LoginFormAdmin({ setUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
+  // Función para manejar el inicio de sesión
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Datos enviados:', { email, password });
@@ -29,6 +31,25 @@ function LoginFormAdmin({ setUser }) {
       } else {
         setError('Error desconocido al iniciar sesión');
       }
+    }
+  };
+
+  // Función para cargar la dirección de correo electrónico desde localStorage al cargar el componente
+  useEffect(() => {
+    const rememberedEmail = localStorage.getItem('rememberedEmailAdmin');
+    if (rememberedEmail) {
+      setEmail(rememberedEmail);
+      setRememberMe(true);
+    }
+  }, []);
+
+  // Función para manejar el cambio en el checkbox "Recordar Contraseña"
+  const handleRememberMeChange = () => {
+    setRememberMe(!rememberMe);
+    if (!rememberMe) {
+      localStorage.setItem('rememberedEmailAdmin', email);
+    } else {
+      localStorage.removeItem('rememberedEmailAdmin');
     }
   };
 
@@ -78,6 +99,27 @@ function LoginFormAdmin({ setUser }) {
                       onChange={(e) => setPassword(e.target.value)}
                       className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                     />
+                  </div>
+                </div>
+
+                <div className="mt-6 flex items-center justify-between">
+                  <div className="flex items-center">
+                    <input
+                      id="rememberMe"
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={handleRememberMeChange}
+                      className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                    />
+                    <label htmlFor="rememberMe" className="ml-2 block text-sm leading-5 text-gray-900">
+                      Recordar Contraseña
+                    </label>
+                  </div>
+
+                  <div className="text-sm leading-5">
+                    <Link to="/forgot-password-admin" className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+                      ¿Olvidaste tu contraseña?
+                    </Link>
                   </div>
                 </div>
 
