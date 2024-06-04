@@ -20,7 +20,7 @@ const DashboardAdmin = () => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/companies');
+        const response = await axios.get('https://tekne-backend.vercel.app/companies');
         setCompanies(response.data);
       } catch (error) {
         console.error('Error al obtener las empresas:', error);
@@ -46,7 +46,7 @@ const DashboardAdmin = () => {
         user_id: userId
       };
 
-      const response = await axios.post('http://localhost:3000/companies', newCompanyData);
+      const response = await axios.post('https://tekne-backend.vercel.app/companies', newCompanyData);
 
       if (response.status === 201) {
         setCompanies([...companies, response.data]);

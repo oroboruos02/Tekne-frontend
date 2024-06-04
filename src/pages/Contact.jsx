@@ -12,7 +12,7 @@ export default function Example() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/enviar-correo', {
+      const response = await fetch('https://tekne-backend.vercel.app/enviar-correo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

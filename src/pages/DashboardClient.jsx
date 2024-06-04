@@ -23,7 +23,7 @@ const DashboardClient = () => {
   useEffect(() => {
     const fetchCompanies = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/companies');
+        const response = await axios.get('https://tekne-backend.vercel.app/companies');
         setCompanies(response.data);
       } catch (error) {
         console.error('Error al obtener las empresas:', error);

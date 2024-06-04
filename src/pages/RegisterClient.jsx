@@ -14,7 +14,7 @@ const RegisterForm = () => {
     console.log('Datos enviados:', { name, email, password });
 
     try {
-      const response = await axios.post('http://localhost:3000/register-client', {
+      const response = await axios.post('https://tekne-backend.vercel.app/register-client', {
         name,
         email,
         password,
