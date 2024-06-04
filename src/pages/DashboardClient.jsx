@@ -41,7 +41,7 @@ const DashboardClient = () => {
             <span className="sr-only">Your Company</span>
             <img className="h-16 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Logo" />
           </Link>
-          <h2 className="text-white text-2xl font-bold">Bienvenido a nuestra plataforma</h2>
+          <h2 className="text-white text-2xl font-bold">Bienvenido al panel de Cliente</h2>
           <div className="flex items-center space-x-4">
             {user && (
               <div className="hidden md:block text-white">

@@ -75,7 +75,7 @@ const DashboardAdmin = () => {
             <span className="sr-only">Your Company</span>
             <img className="h-16 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Logo" />
           </Link>
-          <h1 className="text-white text-2xl font-bold">Bienvenido Administrador</h1>
+          <h1 className="text-white text-2xl font-bold">Bienvenido al panel de Administrador</h1>
           <div className="flex items-center space-x-4">
             {user && (
               <div className="hidden md:block text-white">
