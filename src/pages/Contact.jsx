@@ -1,32 +1,42 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef, useState } from 'react';
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
+import emailjs from '@emailjs/browser';
 
 export default function Example() {
+
+  const form = useRef();
   const [formData, setFormData] = useState({
-    nombre: '',
-    correo: '',
-    mensaje: ''
+    user_name: '',
+    user_email: '',
+    message: ''
   });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await fetch('https://tekne-backend.vercel.app/enviar-correo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+  const [messageSent, setMessageSent] = useState(false); // Estado para manejar el mensaje de confirmación
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hgn5u12', 'template_e7dl3tu', form.current, {
+        publicKey: '_JjlttY7AQ8L_wUlK',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setMessageSent(true); // Mostrar el mensaje de éxito
+          // Limpiar los campos del formulario
+          setFormData({
+            user_name: '',
+            user_email: '',
+            message: ''
+          });
+          // Ocultar el mensaje de éxito después de 5 segundos
+          setTimeout(() => setMessageSent(false), 5000);
         },
-        body: JSON.stringify(formData)
-      });
-      if (response.ok) {
-        console.log('Mensaje enviado correctamente');
-      } else {
-        console.error('Error al enviar el mensaje');
-      }
-    } catch (error) {
-      console.error('Error al enviar el mensaje:', error);
-    }
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   const handleChange = (event) => {
@@ -72,7 +82,7 @@ export default function Example() {
                   <BuildingOffice2Icon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                Calle 56 sur 90b25
+                  Calle 56 sur 90b25
                   <br />
                   Bogotá-Colombia
                 </dd>
@@ -106,14 +116,14 @@ export default function Example() {
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="mailto:teknesoluciones2@gmail.com">
-                    teknesoluciones2@gmail.com
+                  contacto@teknesoluciones.com
                   </a>
                 </dd>
               </div>
             </dl>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <form ref={form} onSubmit={sendEmail} className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
@@ -123,10 +133,10 @@ export default function Example() {
                 <div className="mt-2.5">
                   <input
                     type="text"
-                    name="nombre"
+                    name="user_name"
                     id="nombre"
                     autoComplete="given-name"
-                    value={formData.nombre}
+                    value={formData.user_name}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -139,10 +149,10 @@ export default function Example() {
                 <div className="mt-2.5">
                   <input
                     type="email"
-                    name="correo"
+                    name="user_email"
                     id="correo"
                     autoComplete="email"
-                    value={formData.correo}
+                    value={formData.user_email}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -154,10 +164,10 @@ export default function Example() {
                 </label>
                 <div className="mt-2.5">
                   <textarea
-                    name="mensaje"
+                    name="message"
                     id="mensaje"
                     rows={4}
-                    value={formData.mensaje}
+                    value={formData.message}
                     onChange={handleChange}
                     className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -172,11 +182,14 @@ export default function Example() {
                 Enviar Mensaje
               </button>
             </div>
+            {messageSent && ( // Mostrar el mensaje de confirmación si el mensaje fue enviado
+              <div className="mt-4 text-sm text-green-600">
+                ¡Mensaje enviado con éxito!
+              </div>
+            )}
           </div>
         </form>
       </div>
-
-
 
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-6 z-10">
