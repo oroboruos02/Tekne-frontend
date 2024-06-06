@@ -3,18 +3,25 @@ import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/2
 import emailjs from '@emailjs/browser';
 
 export default function Example() {
-
   const form = useRef();
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
     message: ''
   });
-
   const [messageSent, setMessageSent] = useState(false); // Estado para manejar el mensaje de confirmación
+  const [validationError, setValidationError] = useState(''); // Estado para manejar el mensaje de error
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Validación de campos
+    if (!formData.user_name || !formData.user_email || !formData.message) {
+      setValidationError('Por favor, complete todos los campos antes de enviar.');
+      return;
+    }
+
+    setValidationError(''); // Limpiar el mensaje de error si pasa la validación
 
     emailjs
       .sendForm('service_hgn5u12', 'template_e7dl3tu', form.current, {
@@ -116,7 +123,7 @@ export default function Example() {
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="mailto:teknesoluciones2@gmail.com">
-                  contacto@teknesoluciones.com
+                    contacto@teknesoluciones.com
                   </a>
                 </dd>
               </div>
@@ -174,6 +181,14 @@ export default function Example() {
                 </div>
               </div>
             </div>
+
+
+            {validationError && ( // Mostrar el mensaje de error de validación
+              <div className="mt-2 text-sm text-red-600">{validationError}</div>
+            )}
+
+
+
             <div className="mt-8 flex justify-end">
               <button
                 type="submit"
