@@ -113,7 +113,7 @@ const Menu = () => {
               <div className="hidden lg:flex lg:flex-1 lg:items-center">
                 <Link to="/">
                   <span className="sr-only">Your Company</span>
-                  <img className="h-16 w-auto" src="https://imgur.com/Lvbu5Sv.png" alt="Logo" />
+                  <img className="h-24 w-auto" src="tekne-sin-fondo.png" alt="Logo" />
                 </Link>
               </div>
 
@@ -152,7 +152,7 @@ const Menu = () => {
               {/* Logo (lg-) */}
               <Link to="/" className="lg:hidden">
                 <span className="sr-only">Your Company</span>
-                <img src="https://imgur.com/Lvbu5Sv.png" alt="Logo" className="h-12 w-auto" />
+                <img src="tekne-sin-fondo.png" alt="Logo" className="h-20 w-auto" />
               </Link>
 
               {/* Search desk */}

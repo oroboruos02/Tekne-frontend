@@ -170,9 +170,9 @@ function Services() {
                 <ul className="list-disc list-inside mt-4 text-lg text-gray-600">
                   <li>Coordinador de Proyectos .</li>
                   <li>Teléfono: +57 1 8005381 </li>
-                  <li>Móvil: +57 313 2336061 / +57 310 8581442</li>
-                  <li>Correo: teknesoluciones2@gmail.com</li>
-                  <li>[www.teknesoluciones.com](http://www.teknesoluciones.com)</li>
+                  <li>Móvil: +57 313 2336061</li>
+                  <li>Correo: contacto@teknesoluciones.com</li>
+                  <li>(https://www.teknesoluciones.com)</li>
                 </ul>
               </div>
               <div>

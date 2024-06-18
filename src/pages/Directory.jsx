@@ -26,7 +26,7 @@ function Directory() {
 
   const technicalSupplies = [
     // Datos de ejemplo para la tabla "Suministros técnicos"
-    { name: 'Tekne Soluciones', web: 'www.teknesoluciones.com', contact: 'teknesoluciones2@gmail.com', country: 'Colombia' },
+    { name: 'Tekne Soluciones', web: 'www.teknesoluciones.com', contact: 'contacto@teknesoluciones.com', country: 'Colombia' },
   ];
 
   const protections = [
