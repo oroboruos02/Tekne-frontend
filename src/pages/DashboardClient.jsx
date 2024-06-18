@@ -39,7 +39,7 @@ const DashboardClient = () => {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <Link to="/">
             <span className="sr-only">Your Company</span>
-            <img className="h-20 w-auto" src="tekne-sin-fondo.png" alt="Logo" />
+            <img className="h-24 w-auto" src="tekne-sin-fondo.png" alt="Logo" />
           </Link>
           <h2 className="text-white text-2xl font-bold">Bienvenido al panel de Cliente</h2>
           <div className="flex items-center space-x-4">
