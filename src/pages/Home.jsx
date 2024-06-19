@@ -341,11 +341,18 @@ export default function Example() {
       </div>
     </div>
 
-      {/* footer */}
+{/* footer */}
 <footer aria-labelledby="footer-heading" className="bg-gray-900">
   <h2 id="footer-heading" className="sr-only">Footer</h2>
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div className="py-20 xl:flex xl:justify-center xl:gap-8">
+    <div className="py-20 xl:flex xl:justify-between xl:items-start">
+      <div className="flex items-center mb-8 xl:mb-0 xl:mr-8">
+        <img
+          src="/tekne-sin-fondo.png"
+          alt="Tekne Soluciones"
+          className="h-52 w-auto"
+        />
+      </div>
       <div className="grid grid-cols-2 gap-8 xl:grid-cols-4 xl:gap-16 text-center">
         <div className="space-y-12">
           <h3 className="text-sm font-medium text-white">Comprar</h3>
