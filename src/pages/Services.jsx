@@ -32,7 +32,7 @@ function Services() {
             <h3 id="tableros-electricos" className="text-2xl font-semibold text-gray-900">Ensamble y Diseño de Tableros de Control y Distribución</h3>
                 <p className="mt-4 text-lg text-gray-600">Ofrecemos diseño y ensamble de tableros de control y distribución en baja tensión, adaptados a las necesidades y requerimientos específicos del cliente y el proceso. Nuestros productos cumplen con altos estándares de calidad y utilizan materiales certificados y aprobados según las normativas RETIE y NTC 2050.</p>
           </div>
-            <img className="w-full h-auto rounded-md shadow-md" src="./img39.png" alt="Ensamble y Diseño" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./14.png" alt="Ensamble y Diseño" />
       </div>
 
       {/* Service 2 */}
@@ -42,7 +42,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos, asegurando la excelencia en la ejecución de cada proyecto.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="./img20.png" alt="Servicios de Diseño" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./section1.4.jpg" alt="Servicios de Diseño" />
           </div>
   </div>
 
@@ -53,7 +53,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales, cumpliendo con las normas y estándares nacionales e internacionales, así como con los requerimientos específicos de cada cliente.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img30.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./22.png" alt="Retrofit" />
               </div>
             </div>
 
@@ -64,7 +64,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6), garantizando una comunicación eficiente y segura en entornos industriales.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img21.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./12.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -76,7 +76,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables de acuerdo a los requerimientos de las instalaciones industriales, asegurando un montaje electromecánico eficiente y seguro.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img22.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./section1.3.jpg" alt="Retrofit" />
               </div>
             </div>
 
@@ -87,7 +87,7 @@ function Services() {
             <p className="mt-4 text-lg text-gray-600">Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos, cumpliendo con los requerimientos específicos de cada cliente.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="./img23.png" alt="Retrofit" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./section1.5.jpg" alt="Retrofit" />
           </div>
         </div>
 
@@ -98,7 +98,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.</p>
           </div>
             <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img31.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./16.png" alt="Retrofit" />
               </div>
             </div>
 
@@ -109,7 +109,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof. Además, proporcionamos accesorios y cajas certificadas bajo las normas NEMA 4X y NEMA 7 clase 1 div 1 y 2.</p>
           </div>
           <div>
-              <img className="w-full h-auto rounded-md shadow-md" src="./img32.png" alt="Retrofit" />
+              <img className="w-full h-auto rounded-md shadow-md" src="./11.png" alt="Retrofit" />
           </div>
         </div>
 
@@ -120,7 +120,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Diseñamos y ensamblamos tableros de control, protección y medida para baja, media y alta tensión, utilizando materiales certificados y aprobados según las normativas RETIE y NTC 2050, y ajustándose a las necesidades y requerimientos específicos de cada proyecto.</p>
           </div>
           <div>
-            <img className="w-full h-auto rounded-md shadow-md" src="./img35.png" alt="Retrofit" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./4.png" alt="Retrofit" />
           </div>
         </div>
 
@@ -141,7 +141,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
           </div>
         <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img24.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./13.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -158,7 +158,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img36.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./21.png" alt="Pruebas" />
               </div>
             </div>
 
@@ -176,7 +176,7 @@ function Services() {
                 </ul>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./img37.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./contacto.png" alt="Pruebas" />
               </div>
             </div>
           </div>

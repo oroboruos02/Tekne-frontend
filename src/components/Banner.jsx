@@ -7,7 +7,7 @@ const Banner = () => {
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img
-            src="./img1.png"
+            src="./banner.jpg"
             alt=""
             className="h-full w-full object-cover object-center"
           />

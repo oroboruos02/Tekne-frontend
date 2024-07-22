@@ -48,30 +48,30 @@ export default function Example() {
     {
       name: 'Suministro de Personal Técnico',
       href: supplyRef,
-      imageSrc: './img20.png',
+      imageSrc: './section1.4.jpg',
       description: 'Contamos con un equipo altamente capacitado y con amplia experiencia en todas las áreas y procesos constructivos.',
     },
     {
       name: 'Comunicaciones',
       href: communicationsRef,
-      imageSrc: './img21.png',
+      imageSrc: './12.png',
       description: 'Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6).',
     },
     {
       name: 'Montaje Electromecánico',
       href: mountingRef,
-      imageSrc: './img22.png',
+      imageSrc: './section1.3.jpg',
       description: 'Realizamos la construcción de rutas, canalizaciones, tuberías y bandejas portacables.',
     },
     {
       name: 'Cableado y Conexionado',
       href: cablingRef,
-      imageSrc: './img23.png',
+      imageSrc: './section1.5.jpg',
       description: 'Nos encargamos del cableado y conexionado de control y potencia en sistemas industriales, subestaciones y áreas de procesos.',
     },
     { name: 'Mantenimiento',
       href: maintenanceRef,
-      imageSrc: './img24.png',
+      imageSrc: './13.png',
       description: 'Ofrecemos servicios de mantenimiento y pruebas eléctricas en equipos de corte y protección en baja, media y alta tensión',
      },
   ]
@@ -80,21 +80,21 @@ export default function Example() {
     {
       name: 'Control Industrial',
       href: controlRef,
-      imageSrc: './img30.png',
+      imageSrc: './22.png',
       imageAlt: 'Brown leather key ring with brass metal loops and rivets on wood table.',
       description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
     },
     {
       name: 'Instrumentación',
       href: instrumentationRef,
-      imageSrc: './img31.png',
+      imageSrc: './16.png',
       imageAlt: 'Natural leather mouse pad on white desk next to porcelain mug and keyboard.',
       description: 'Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.',
     },
     {
       name: 'Áreas Clasificadas',
       href: areasRef,
-      imageSrc: './img32.png',
+      imageSrc: './11.png',
       imageAlt: 'Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.',
       description: 'Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof.',
     },
@@ -204,7 +204,7 @@ export default function Example() {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src="./img39.png"
+                src="./14.png"
                 alt=""
                 className="h-full w-full object-cover object-center"
               />
@@ -266,7 +266,7 @@ export default function Example() {
   <div className="relative overflow-hidden rounded-lg">
     <div className="absolute inset-0">
       <img
-        src="./img36.png"
+        src="./21.png"
         alt=""
         className="h-full w-full object-cover object-center"
       />
@@ -348,7 +348,7 @@ export default function Example() {
     <div className="py-20 xl:flex xl:justify-between xl:items-start">
       <div className="flex items-center mb-8 xl:mb-0 xl:mr-8">
         <img
-          src="/tekne-sin-fondo.png"
+          src="/logo.png"
           alt="Tekne Soluciones"
           className="h-52 w-auto"
         />
