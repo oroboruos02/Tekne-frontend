@@ -48,7 +48,7 @@ const Menu = () => {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-[#111827] pb-12 shadow-xl">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-[#111827] ">
                 <div className="flex px-4 pb-2 pt-5">
                   <button
                     type="button"
@@ -152,7 +152,7 @@ const Menu = () => {
               {/* Logo (lg-) */}
               <Link to="/" className="lg:hidden">
                 <span className="sr-only">Your Company</span>
-                <img src="tekne-sin-fondo.png" alt="Logo" className="h-20 w-auto" />
+                <img src="logo.png" alt="Logo" className="h-24 w-auto" />
               </Link>
 
               {/* Search desk */}

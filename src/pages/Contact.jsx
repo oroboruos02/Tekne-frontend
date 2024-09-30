@@ -112,7 +112,7 @@ export default function Example() {
                 </dt>
                 <dd>
                   <a className="hover:text-gray-900" href="tel:+1 (555) 234-5678">
-                    +57 3132336061 / +57 3108581442
+                    +57 3125657516 / +57 3108581442
                   </a>
                 </dd>
               </div>

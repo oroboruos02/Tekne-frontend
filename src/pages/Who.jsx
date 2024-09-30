@@ -106,10 +106,10 @@ function Who() {
               </div>
               <div className="flex flex-col items-center space-y-6">
                 <div className="w-20 h-20 rounded-full overflow-hidden bg-gray-100">
-                  <img className="w-full h-full object-cover" src="https://www.ga-p.com/wp-content/uploads/2018/03/Juan-P%C3%A9rez-G%C3%B3mez-e1606511654387.jpg" alt="Profile of a man" />
+                  <img className="w-full h-full object-cover" src="yesid.webp" alt="Profile of a man" />
                 </div>
-                <div className="text-lg font-semibold text-gray-900">Juan Pérez</div>
-                <div className="text-gray-600">"Testimonio de Juan Perez: "Estamos enormemente satisfechos con los servicios de ingeniería y montajes eléctricos de TEKNE SOLUCIONES. El equipo demostró un profundo conocimiento técnico y una habilidad excepcional para adaptarse a nuestras necesidades específicas. Su capacidad para identificar y resolver problemas complejos en tiempo récord fue impresionante. Gracias a su colaboración, hemos logrado la energización de la subestación en tiempo récord. Su compromiso con la excelencia los convierte en un socio invaluable en nuestro éxito."</div>
+                <div className="text-lg font-semibold text-gray-900">Yesid Anacona</div>
+                <div className="text-gray-600">"Teckne Soluciones nos ha ayudado en varios de nuestros proyectos, y siempre han demostrado un gran compromiso con su trabajo. Entregan a tiempo y con excelente calidad. La experiencia y el conocimiento que tienen en su campo son evidentes, y eso nos da mucha confianza en cada proyecto que ejecutamos con ellos. Además, son muy accesibles y siempre están dispuestos a resolver cualquier duda o inconveniente. Los recomiendo mucho, ya que son una empresa muy confiable y profesional."</div>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ function Who() {
       
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-36 z-10">
-        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=+573125657516&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
         </a>
       </div>

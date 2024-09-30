@@ -32,7 +32,7 @@ function Services() {
             <h3 id="tableros-electricos" className="text-2xl font-semibold text-gray-900">Ensamble y Diseño de Tableros de Control y Distribución</h3>
                 <p className="mt-4 text-lg text-gray-600">Ofrecemos diseño y ensamble de tableros de control y distribución en baja tensión, adaptados a las necesidades y requerimientos específicos del cliente y el proceso. Nuestros productos cumplen con altos estándares de calidad y utilizan materiales certificados y aprobados según las normativas RETIE y NTC 2050.</p>
           </div>
-            <img className="w-full h-auto rounded-md shadow-md" src="./14.png" alt="Ensamble y Diseño" />
+            <img className="w-full h-auto rounded-md shadow-md" src="./14.jpg" alt="Ensamble y Diseño" />
       </div>
 
       {/* Service 2 */}
@@ -64,7 +64,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con una amplia experiencia en redes de control y supervisión, incluyendo la construcción y certificación de enlaces de fibra óptica y cobre (UTP, FTP, CAT 5E y 6), garantizando una comunicación eficiente y segura en entornos industriales.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./12.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./12.jpg" alt="Pruebas" />
               </div>
             </div>
 
@@ -98,7 +98,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Realizamos la instalación y configuración de instrumentación industrial en áreas de proceso clasificadas, cumpliendo con las normativas NEMA 4X y 7.</p>
           </div>
             <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./16.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./16.jpg" alt="Retrofit" />
               </div>
             </div>
 
@@ -109,7 +109,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Ofrecemos instalaciones eléctricas y de control en áreas clasificadas, realizando montajes que cumplen con los estándares de seguridad explosion proof. Además, proporcionamos accesorios y cajas certificadas bajo las normas NEMA 4X y NEMA 7 clase 1 div 1 y 2.</p>
           </div>
           <div>
-              <img className="w-full h-auto rounded-md shadow-md" src="./11.png" alt="Retrofit" />
+              <img className="w-full h-auto rounded-md shadow-md" src="./11.jpg" alt="Retrofit" />
           </div>
         </div>
 
@@ -141,7 +141,7 @@ function Services() {
               <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
           </div>
         <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./13.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./13.jpg" alt="Pruebas" />
               </div>
             </div>
 
@@ -158,7 +158,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Contamos con equipos modernos y especializados para realizar estas pruebas, garantizando resultados precisos y confiables.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./21.png" alt="Pruebas" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./21.jpg" alt="Pruebas" />
               </div>
             </div>
 
@@ -239,7 +239,7 @@ function Services() {
 
       {/* WhatsApp bottom */}
       <div className="fixed bottom-12 right-36 z-10">
-        <a href="https://api.whatsapp.com/send?phone=+573132336061&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
+        <a href="https://api.whatsapp.com/send?phone=+573125657516&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300" aria-label="WhatsApp">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="WhatsApp Icon" className="h-6 w-6 text-white" />
         </a>
       </div>
