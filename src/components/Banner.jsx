@@ -20,7 +20,7 @@ const Banner = () => {
           ¡Bienvenidos a Tekne! Excelencia en ingeniería, montajes eléctricos y automatización.
         </h1>
         <p className="mt-4 text-lg sm:text-xl text-white">
-          Hacemos de tu proyecto nuestro compromiso.
+          Hacemos de tu proyecto nuestro compromisos.
         </p>
         <Link
           to="/contact"
