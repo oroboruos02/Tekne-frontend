@@ -53,7 +53,7 @@ function Services() {
                 <p className="mt-4 text-lg text-gray-600">Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales, cumpliendo con las normas y estándares nacionales e internacionales, así como con los requerimientos específicos de cada cliente.</p>
               </div>
               <div>
-                <img className="w-full h-auto rounded-md shadow-md" src="./22.png" alt="Retrofit" />
+                <img className="w-full h-auto rounded-md shadow-md" src="./22.jpg" alt="Retrofit" />
               </div>
             </div>
 

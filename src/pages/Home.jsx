@@ -78,7 +78,7 @@ export default function Example() {
     {
       name: 'Control Industrial',
       href: controlRef,
-      imageSrc: './22.png',
+      imageSrc: './22.jpg',
       imageAlt: 'Tablero de control industrial',
       description: 'Diseñamos, ensamblamos y ponemos en servicio tableros y consolas de control automático de procesos industriales.',
     },
@@ -117,12 +117,7 @@ export default function Example() {
       <div className="relative bg-gray-900">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          <img
-            src="./img1.png"
-            alt="Fondo de automatización"
-            className="h-full w-full object-cover object-center"
-            loading="lazy"
-          />
+          
         </div>
         <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
 
