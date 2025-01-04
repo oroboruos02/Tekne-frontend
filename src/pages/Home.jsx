@@ -102,7 +102,7 @@ export default function Example() {
     <div className="bg-white">
       {/* SEO optimizations */}
       <Helmet>
-        <title>Tus Servicios de Automatización - Tekne Soluciones</title>
+        <title>Tekne Soluciones</title>
         <meta name="description" content="Tekne Soluciones ofrece servicios de automatización, montaje electromecánico, comunicaciones, y mantenimiento. Proveemos soluciones industriales de alta calidad." />
         <meta name="keywords" content="automatización industrial, montaje electromecánico, comunicaciones, mantenimiento eléctrico, instalación de control, control industrial, instrumentación" />
         <link rel="canonical" href="https://www.tusitio.com" />
